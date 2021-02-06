@@ -1,4 +1,4 @@
-// routes for a user's favorite items
+//  route for login
 
 
 const express = require('express');

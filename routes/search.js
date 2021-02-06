@@ -1,4 +1,4 @@
-// routes for private messages
+// routes for searching items
 
 
 const express = require('express');
