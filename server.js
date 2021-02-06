@@ -31,9 +31,11 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 const itemsRoutes = require('./routes/items');
 const loginRoutes = require('./routes/login');
+const usersRoutes = require('./routes/users');
 
 // mounted resource routes
 app.use('/items', itemsRoutes);
+app.use('/users', usersRoutes);
 
 
 // Home page
