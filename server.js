@@ -10,11 +10,8 @@ const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
 
-// PG database client/connection setup
-const { Pool } = require('pg');
-const dbParams = require('./lib/db.js');
-const db = new Pool(dbParams);
-db.connect();
+//NOTE: database is in /lib/db.js and used modularly by /routes files via queries /lib
+
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -32,20 +29,22 @@ app.use("/styles", sass({
 app.use(express.static("public"));
 
 // Separated Routes for each Resource
-// Note: Feel free to replace the example routes below with your own
-const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
+const itemsRoutes = require('./routes/items');
+// const loginRoutes = require('./routes/login');
+//logout goes here
+const searchRoutes = require('./routes/search');
+const usersRoutes = require('./routes/users');
 
-// Mount all resource routes
-// Note: Feel free to replace the example routes below with your own
-app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
-// Note: mount other resources here, using the same pattern above
+
+// mounted resource routes
+app.use('/items', itemsRoutes);
+// app.use('/login', loginRoutes);
+//logout goes here
+app.use('/search', searchRoutes);
+app.use('/users', usersRoutes);
 
 
 // Home page
-// Warning: avoid creating more routes in this file!
-// Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
   res.render("index");
 });
