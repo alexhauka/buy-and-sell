@@ -30,11 +30,17 @@ app.use(express.static("public"));
 
 // Separated Routes for each Resource
 const itemsRoutes = require('./routes/items');
-const loginRoutes = require('./routes/login');
+// const loginRoutes = require('./routes/login');
+//logout goes here
+const searchRoutes = require('./routes/search');
 const usersRoutes = require('./routes/users');
+
 
 // mounted resource routes
 app.use('/items', itemsRoutes);
+// app.use('/login', loginRoutes);
+//logout goes here
+app.use('/search', searchRoutes);
 app.use('/users', usersRoutes);
 
 
