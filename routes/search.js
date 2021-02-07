@@ -3,15 +3,20 @@
 // routes for searching items
 const express = require('express');
 const router  = express.Router();
-//search queries go here
+const searchItems = require('../lib/search-queries');
 
-//get search
+//get /search
 router.get('/', (req, res) => {
-  // searchqueryfunction()
-  // .then((users) => {
-    //res.render('template')
-    // res.json(users)
-  // });
+  res.send('search page');
+});
+
+//post /search
+router.post('/', (req, res) => {
+  searchItems(req.query)
+  .then((results) => {
+    // res.render('template')
+    res.json(results)
+  });
 });
 
 

@@ -3,7 +3,7 @@
 // routes for items
 const express = require('express');
 const router  = express.Router();
-const { getItems, getItemById } = require('../lib/item-queries');
+const { getItems, getItemById, addItem } = require('../lib/item-queries');
 
 // get /items
 router.get('/', (req, res) => {
@@ -22,5 +22,23 @@ router.get('/:id', (req, res) => {
     res.json(item)
   });
 });
+
+//get /items/new
+router.get('/new', (req, res) => {
+  res.send('post a new item page')
+  // res.render('whateverTheTemplateIs')
+})
+
+router.post('/new', (req, res) => {
+  const userId = req.session.userId;
+  addItem({...req.body, user_id: userId})
+  .then(item => {
+    res.send(item);
+  })
+  .catch(e => {
+    console.error(e);
+    res.send(e);
+  });
+})
 
 module.exports = router;
