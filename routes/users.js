@@ -7,6 +7,7 @@ const {
   getUsers,
   getUserById,
   getFavorites,
+  addFavorite,
   getMessages,
   getMessage,
   sendMessage
@@ -80,6 +81,24 @@ router.get('/:id/messages/:messageid', (req, res) => {
     res.redirect('/')
   }
 })
+
+// post /users/:id/favorites (add to favorites)
+router.post('/:id/favorites', (req, res) => {
+  if (req.session.user_id) {
+    const userId = req.session.user_id;
+    const itemId = req.body;
+    addFavorite(userId, itemId)
+    .then((item) => {
+      res.send(item);
+    })
+    .catch(e => {
+      console.error(e);
+      res.send(e);
+    })
+  } else {
+    res.redirect('/');
+  };
+});
 
 // post /users/:id/messages/:messageid (message a user)
 router.post('/:id/messages/:messageid', (req, res) => {

@@ -28,14 +28,14 @@ router.get('/:id', (req, res) => {
   });
 });
 
-//get /items/new
-router.get('/new', (req, res) => {
-  res.send('post a new item page')
-  // res.render('whateverTheTemplateIs')
-});
+// //get /items/new
+// router.get('/new', (req, res) => {
+//   res.send('post a new item page')
+//   // res.render('whateverTheTemplateIs')
+// });
 
-//post items/new
-router.post('/new', (req, res) => {
+//post a new item
+router.post('/', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.userId;
     addItem({...req.body, user_id: userId})
