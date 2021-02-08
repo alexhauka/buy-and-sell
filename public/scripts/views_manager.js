@@ -6,6 +6,8 @@ $(() => {
 
   window.views_manager.show = function(content) {
     $itemListings.detach();
+    $newItemForm.detach();
+    $searchItemForm.detach();
     $item.detach();
 
     switch (content) {
@@ -15,6 +17,14 @@ $(() => {
 
       case 'item':
         $item.appendTo($main);
+        break;
+
+      case 'newItem':
+        $newItemForm.appendTo($main);
+        break;
+
+      case 'searchItem':
+        $searchItemForm.appendTo($main);
         break;
 
       case 'error': {
