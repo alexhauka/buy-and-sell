@@ -29,6 +29,7 @@ router.get('/new', (req, res) => {
   // res.render('whateverTheTemplateIs')
 })
 
+//post items/new
 router.post('/new', (req, res) => {
   const userId = req.session.userId;
   addItem({...req.body, user_id: userId})
