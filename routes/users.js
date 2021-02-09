@@ -8,6 +8,7 @@ const {
   getUserById,
   getFavorites,
   addFavorite,
+  deleteFavorite,
   getMessages,
   getMessage,
   sendMessage
@@ -99,6 +100,25 @@ router.post('/:id/favorites', (req, res) => {
     res.redirect('/');
   };
 });
+
+//post /users/:id/favorites/delete (delete favorite)
+router.post('/:id/favorites/delete', (req, res) => {
+  if (req.session.user_id) {
+    const userId = req.session.user_id;
+    const itemId = req.body;
+    deleteFavorite(userId, itemId)
+    //not sure if next two lines are needed
+    .then(item => {
+      res.send(item);
+    })
+    .catch(e => {
+      console.error(e);
+      res.send(e);
+    });
+  } else {
+    res.redirect('/');
+  };
+})
 
 // post /users/:id/messages/:messageid (message a user)
 router.post('/:id/messages/:messageid', (req, res) => {
