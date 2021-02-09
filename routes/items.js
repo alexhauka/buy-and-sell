@@ -7,6 +7,7 @@ const {
   getItems,
   getItemById,
   addItem,
+  editItem,
   addComment
 } = require('../lib/item-queries');
 
@@ -64,6 +65,24 @@ router.post('/:id', (req, res) => {
       console.error(e);
       res.send(e);
     })
+  } else {
+    res.redirect('/');
+  };
+});
+
+//post items/:id/edit (edit an owned item)
+router.post('/:id/edit', (req, res) => {
+  if (req.session.user_id) {
+    const userId = req.session.user_id;
+    const itemId = req.params.id;
+    editItem({...req.body, user_id: userId, id: itemId})
+    .then(item => {
+      res.send(item);
+    })
+    .catch(e => {
+      console.error(e);
+      res.send(e)
+    });
   } else {
     res.redirect('/');
   };
