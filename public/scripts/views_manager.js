@@ -1,22 +1,22 @@
 $(() => {
 
-  const $main = $('body');
+  const $main = $('main');
 
   window.views_manager = {};
 
-  window.views_manager.show = function(content) {
-    $itemListings.detach();
+  window.views_manager.show = function(page) {
+    $item.detach();
+    $items.detach();
     $newItemForm.detach();
     $searchItemForm.detach();
-    $item.detach();
 
-    switch (content) {
-      case 'listings':
-        $itemListings.appendTo($main);
-        break;
-
+    switch (page) {
       case 'item':
         $item.appendTo($main);
+        break;
+
+      case 'items':
+        $items.appendTo($main);
         break;
 
       case 'newItem':
