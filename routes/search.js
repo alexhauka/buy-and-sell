@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 //post /search
 router.post('/', (req, res) => {
-  searchItems(req.query)
+  searchItems(req.body)
   .then((results) => {
     // res.render('template')
     res.json(results)
