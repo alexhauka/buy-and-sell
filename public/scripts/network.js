@@ -56,18 +56,18 @@ const submitComment = function(body, id) {
   });
 };
 
-const getMessageByUser = function(userID) {
+const getMessageByUser = function() {
   console.log('getMessageByUser worked')
     return $.ajax({
     method: 'GET',
-    url: `/users/${userID}/messages`
+    url: `/users/:id/messages`
   });
 }
 
-const getFavouritesByUser = function(userID) {
+const getFavouritesByUser = function() {
   console.log('getFavouritesByUser worked')
     return $.ajax({
     method: 'GET',
-    url: `/users/${userID}/favorites`
+    url: `/users/:id/favorites`
   });
 }
