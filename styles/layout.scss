@@ -1,9 +1,97 @@
 // See: https://sass-lang.com/
 
-body {
-  background-color: #EEE;
+$navBarBground: #c7b55b;
+$mainPageBground: #DFDBE5;
 
-  h1 {
-    color: #244751;
+
+body {
+  background-color: $mainPageBground;
+  font-family: 'Poppins', sans-serif;
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: $navBarBground;
+    height: 120px;
+    #search-bar {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      border: 3px solid black; //temporary
+      justify-content: flex-start;
+      #cancel-button {
+        background-color: $navBarBground; //blend button in with nav bground
+        text-decoration: none;
+        border: none;
+      }
+      div {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: center;
+        form {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          input {
+            width: 50%;
+            height: 80%;
+          }
+        }
+      }
+    }
+    #logo-links-and-name {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      #logo {
+        width: 25%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      #links-and-name {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding-left: 15px;
+        #company-name {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          max-height: 48px;
+          h3 {
+            max-height: 48px;
+            font-size: 2.5em;
+            margin-bottom: 0px;
+            margin-top: 5px;
+          }
+        }
+        #links {
+          margin-top: 45px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          ol {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            padding-left: 15px;
+            justify-content: space-between;
+            a {
+              font-family: 'Ubuntu Condensed', sans-serif;
+              font-size: 1.0em;
+              color: white;
+              text-decoration: none;
+              &:hover {
+                padding-top: 5px;
+                cursor: pointer;
+                }
+              }
+            }
+          }
+      }
+    }
   }
 }
