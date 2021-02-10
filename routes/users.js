@@ -69,6 +69,9 @@ router.get('/:id/messages/:messageid', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.user_id;
     const otherId = req.params.messageid;
+    if (userId === otherId) {
+      return res.redirect('/users/:id/messages');
+    }
     getMessage(userId, otherId)
     .then((results) => {
       // res.render('template')
