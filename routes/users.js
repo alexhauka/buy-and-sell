@@ -35,7 +35,8 @@ router.get('/:id', (req, res) => {
 //get /users/:id/favorites
 router.get('/:id/favorites', (req, res) => {
   if (req.session.user_id) {
-    getFavorites(req.params.id)
+    const userId = req.session.user_id;
+    getFavorites(userId)
     .then((results) => {
       // res.render('template')
       res.json(results)
