@@ -50,7 +50,7 @@ $(() => {
             <div id ="links">
               <ol>
                 <a href = "/items">New Post</a>
-                <a href = "/users/:id/messages" id = "messages">Messages</a>
+                <a id = "messages">Messages</a>
                 <a id ="search-bar-link">Quick Search</a>
                 <a href = "/search">Advanced Search</a>
                 <a href = "/logout">Logout</a>
@@ -96,24 +96,17 @@ $(() => {
     $('#cancel-button').on('click', function () {
       $('#search-bar').slideUp()
     })
+    $('#search-button').on('submit', function () {
+      //add a post request to /search on submit
+    })
+    $('#messages').on('click', function () {
+      getMessageByUser(userID)
+      .then(msgObj => {
+        msgObj.forEach(msg => {
+          console.log(msg)
+          $('main').append(createMessage(msg))
+        })
+      })
+    })
   }
-
-  $('#search-button').on('submit', function () {
-    //add a post request to /search on submit
-  })
-
-  $('#messages').on('click', function () {
-    // getMessageByUser(user)
-    // .then(msgObj => {
-    //   console.log(msgObj)
-    //   loadMessages(msgObj[0])
-    // })
-    getMessageByUser(userID)
-    .then(console.log('worked'))
-  })
-
-
-
-
-
 });
