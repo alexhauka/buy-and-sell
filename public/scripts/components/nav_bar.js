@@ -71,6 +71,7 @@ $(() => {
       `
     }
     $('nav').append(navBar)
+    registerHandlers()
   }
 
   let userID;
@@ -80,21 +81,22 @@ $(() => {
     if (msgObj[0].id) {
       userID = msgObj[0].id
       loadNavBar(userID)
+      $('#search-bar').hide()
     } else {
       userID = null
       loadNavBar(userID)
+      $('#search-bar').hide()
     }
   });
 
-  $('#search-bar').hide()
-
-  $('#search-bar-link').on('click', function () {
-    $('#search-bar').slideDown()
-  })
-
-  $('#cancel-button').on('click', function () {
-    $('#search-bar').slideUp()
-  })
+  const registerHandlers = function () {
+    $('#search-bar-link').on('click', function () {
+      $('#search-bar').slideDown()
+    })
+    $('#cancel-button').on('click', function () {
+      $('#search-bar').slideUp()
+    })
+  }
 
   $('#search-button').on('submit', function () {
     //add a post request to /search on submit
@@ -106,6 +108,12 @@ $(() => {
     //   console.log(msgObj)
     //   loadMessages(msgObj[0])
     // })
+    getMessageByUser(userID)
+    .then(console.log('worked'))
   })
+
+
+
+
 
 });
