@@ -1,6 +1,8 @@
 $(() => {
-  getAllListings().then(function(json) {
-    itemListings.addItems(json);
-    views_manager.show('listings');
-  });
+  getItems()
+      .then(data => {
+        items.showItems(data);
+        views_manager.show('items');
+      })
+      .catch(error => console.error(error));
 });
