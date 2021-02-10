@@ -47,11 +47,11 @@ app.use('/logout', logoutRoutes);
 app.use('/search', searchRoutes);
 app.use('/users', usersRoutes);
 
-
+// !!!!----- first page ejs is disabled now ------!!!!!
 // Home page
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
