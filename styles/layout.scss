@@ -54,7 +54,7 @@ body {
       #links-and-name {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 80%;
         padding-left: 15px;
         #company-name {
           display: flex;
@@ -92,6 +92,15 @@ body {
             }
           }
       }
+    }
+  }
+  article {
+    padding-left: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-bottom: none;
+    span {
+      color: red;
     }
   }
 }

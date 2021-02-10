@@ -49,11 +49,12 @@ $(() => {
             </div>
             <div id ="links">
               <ol>
-                <a href = "/items">New Post</a>
-                <a id = "messages">Messages</a>
+                <a href ="/items">New Post</a>
+                <a id ="messages">Messages</a>
+                <a id ="favourites">Favourites</a>
                 <a id ="search-bar-link">Quick Search</a>
-                <a href = "/search">Advanced Search</a>
-                <a href = "/logout">Logout</a>
+                <a href ="/search">Advanced Search</a>
+                <a href ="/logout">Logout</a>
               </ol>
             </div>
           </div>
@@ -76,6 +77,7 @@ $(() => {
 
   let userID;
 
+  //check if a user is logged in and get user id since nav links vary depending on if user is logged in
   $.get('users/:id/messages')
   .then(msgObj => {
     if (msgObj[0].id) {
@@ -100,11 +102,22 @@ $(() => {
       //add a post request to /search on submit
     })
     $('#messages').on('click', function () {
+      $('main').empty()
       getMessageByUser(userID)
       .then(msgObj => {
         msgObj.forEach(msg => {
           console.log(msg)
-          $('main').append(createMessage(msg))
+          $('main').append(loadMessages(msg))
+        })
+      })
+    })
+    $('#favourites').on('click', function () {
+      $('main').empty()
+      getFavouritesByUser(userID)
+      .then(favObj => {
+        favObj.forEach(favItem => {
+          console.log(favItem)
+          $('main').append(loadFavourites(favItem))
         })
       })
     })
