@@ -69,6 +69,8 @@ router.get('/:id/messages/:messageid', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.user_id;
     const otherId = req.params.messageid;
+    console.log(userId)
+    console.log(otherId)
     getMessage(userId, otherId)
     .then((results) => {
       // res.render('template')

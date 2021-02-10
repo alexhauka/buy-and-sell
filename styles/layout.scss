@@ -102,6 +102,14 @@ body {
     span {
       color: red;
     }
+    a {
+      color: red;
+      text-decoration: none;
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
   }
 }
 

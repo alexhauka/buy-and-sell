@@ -103,21 +103,24 @@ $(() => {
     })
     $('#messages').on('click', function () {
       $('main').empty()
-      getMessageByUser(userID)
+      getAllMessagesByUser(userID)
       .then(msgObj => {
         msgObj.forEach(msg => {
-          console.log(msg)
-          $('main').append(loadMessages(msg))
+          $('main').append(loadAllMessages(msg))
+          $('main').hide()
+          $('main').slideDown()
         })
       })
+
     })
     $('#favourites').on('click', function () {
       $('main').empty()
       getFavouritesByUser(userID)
       .then(favObj => {
         favObj.forEach(favItem => {
-          console.log(favItem)
           $('main').append(loadFavourites(favItem))
+          $('main').hide()
+          $('main').slideDown()
         })
       })
     })
