@@ -22,10 +22,10 @@ $(() => {
             </div>
             <div id ="links">
               <ol>
-                <a class="nav-login" href=#>Login</a>
-                <a href = "">Register</a>
-                <a id ="search-bar-link">Quick Search</a>
-                <a href = "/search">Advanced Search</a>
+                <a class="nav-login">Login</a>
+                <a class="nav-register">Register</a>
+                <a id="search-bar-link">Quick Search</a>
+                <a class="nav-search">Advanced Search</a>
               </ol>
             </div>
           </div>
@@ -55,12 +55,13 @@ $(() => {
             </div>
             <div id ="links">
               <ol>
-                <a href = #>${user.name}</a>
-                <a class="nav-new-item" href = #>New Post</a>
-                <a href = "/users/:id/messages" id = "messages">Messages</a>
+                <a class="nav-user-id" id="nav-user-id${user.id}">${user.name}</a>
+                <a class="nav-new-item">New Post</a>
+                <a class="nav-messages">Messages</a>
+                <a class="nav-favourites">Favourites</a>
                 <a id ="search-bar-link">Quick Search</a>
-                <a class="nav-search" href = #>Advanced Search</a>
-                <a class="nav-logout" href = #>Logout</a>
+                <a class="nav-search">Advanced Search</a>
+                <a class="nav-logout">Logout</a>
               </ol>
             </div>
           </div>
@@ -82,6 +83,10 @@ $(() => {
   }
 
   window.header.loadHeader = loadHeader;
+
+  const getUserId = function() {
+    return $('header').find('.nav-user-id').attr('id').slice(11);
+  };
 
   logIn()
     .then(user => {
@@ -117,5 +122,35 @@ $(() => {
 
   $('header').on('click', '.nav-search', function() {
     views_manager.show('searchItem');
+  });
+
+  $('header').on('click', '#search-bar-link', function() {
+    $('#search-bar').slideDown()
+  });
+
+  $('header').on('click', '#cancel-button', function() {
+    $('#search-bar').slideUp()
+  });
+
+  $('header').on('click', '.nav-messages', function() {
+    const userID = getUserId();
+    
+    getMessageByUser(userID)
+      .then(msgObj => {
+        messages.loadMessages(msgObj);
+        views_manager.show('messages');
+      })
+      .catch(error => console.error(error));
+  });
+
+  $('header').on('click', '.nav-favourites', function() {
+    const userID = getUserId();
+    
+    getFavouritesByUser(userID)
+      .then(favObj => {
+        favorites.loadFavourites(favObj);
+        views_manager.show('favorites');
+      })
+      .catch(error => console.error(error));
   });
 });
