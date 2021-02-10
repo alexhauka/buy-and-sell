@@ -1,11 +1,12 @@
-const getAllListings = function(params) {
-  let url = `/items`;
-
-  if (params) {
-    url += "?" + params;
-  }
+const logIn = function() {
   return $.ajax({
-    url,
+    url: "/login/1",
+  })
+};
+
+const logOut = function() {
+  return $.ajax({
+    url: '/logout',
   });
 };
 
@@ -15,18 +16,42 @@ const getItem = function(id) {
   });
 };
 
-const submitItem = function(data) {
+const getItems = function(body) {
+  let url = `/items`;
+
+  if (body) {
+    url += "?" + body;
+  }
   return $.ajax({
-    method: 'POST',
-    url: '/items/new',
-    data,
+    url,
   });
 };
 
-const getSearchListings = function(data) {
+const searchItems = function(params) {
+  return $.ajax({
+    url: `/search?${params}&limit=10`
+  });
+}
+
+const submitItem = function(body) {
   return $.ajax({
     method: 'POST',
-    url: '/search',
-    data,
+    url: `/items?${body}`,
+  });
+};
+
+const getComments = function(id) {
+  return $.ajax({
+    url: `/items/${id}/comments`,
+  });
+};
+
+const submitComment = function(body, id) {
+  return $.ajax({
+    method: 'POST',
+    url: `/items/${id}`,
+    data: {
+      comment: body[0].value,
+    }
   });
 };
