@@ -12,7 +12,7 @@ const {
   addComment
 } = require('../lib/item-queries');
 
-// get /items
+// get /items (get all)
 router.get('/', (req, res) => {
   getItems()
   .then((items) => {
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
   });
 });
 
-//get /items/:id
+//get /items/:id (get one)
 router.get('/:id', (req, res) => {
   getItemById(req.params.id)
   .then((item) => {
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
 //   // res.render('whateverTheTemplateIs')
 // });
 
-//post a new item
+//post /items  (post a new item)
 router.post('/', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.userId;
