@@ -6,6 +6,7 @@ const router  = express.Router();
 const {
   getItems,
   getItemById,
+  getUserItems,
   addItem,
   editItem,
   deleteItem,
@@ -22,6 +23,7 @@ router.get('/', (req, res) => {
   });
 });
 
+
 //get /items/:id (get one)
 router.get('/:id', (req, res) => {
   getItemById(req.params.id)
@@ -30,6 +32,17 @@ router.get('/:id', (req, res) => {
     res.json(item)
   });
 });
+
+// get /items/user/:id  (get a user's items)
+router.get('/user/:id', (req, res) => {
+  const userId = req.session.user_id
+  getUserItems(userId)
+  .then((items) => {
+    res.json(items)
+  });
+});
+
+
 
 // //get /items/new
 // router.get('/new', (req, res) => {
