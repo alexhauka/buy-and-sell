@@ -3,26 +3,15 @@
 $navBarBground: #c7b55b;
 
 body {
-  nav {
-    display: flex;
-    flex-direction: row;
-    background-color: $navBarBground;
-    height: 18vh;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    overflow: hidden;
+  .quick-search-dropdown {
+    margin-top: 126px;
     #search-bar {
       display: flex;
       flex-direction: column;
-      width: 30%;
-      border: 3px solid black; //temporary
+      margin-left: 20%;
       justify-content: flex-start;
-      #cancel-button {
-        background-color: $navBarBground; //blend button in with nav bground
-        text-decoration: none;
-        border: none;
-      }
+      height: 60px;
+      border-top: 1px solid black;
       div {
         height: 80%;
         display: flex;
@@ -32,15 +21,34 @@ body {
         form {
           display: flex;
           flex-direction: row;
-          justify-content: center;
           input {
             width: 50%;
             height: 80%;
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+          button {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          #cancel-button {
+            margin-left: 5px;
           }
         }
       }
     }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: $navBarBground;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    overflow: hidden;
     #logo-links-and-name {
+      height: 18vh;
       display: flex;
       flex-direction: row;
       width: 80%;
@@ -61,12 +69,14 @@ body {
           flex-direction: row;
           justify-content: center;
           max-height: 48px;
+          word-wrap: break-word;
           h3 {
             font-family: 'Lobster', cursive;
             max-height: 48px;
             font-size: 3.5em;
             margin-bottom: 0px;
             margin-top: 5px;
+
           }
         }
         #links {
@@ -96,4 +106,72 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    nav {
+      #logo-links-and-name {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        #logo {
+          width: 25%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        #links-and-name {
+          display: flex;
+          flex-direction: column;
+          width: 70%;
+          padding-left: 15px;
+          #company-name {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            max-height: 48px;
+            word-wrap: break-word;
+            h3 {
+              font-family: 'Lobster', cursive;
+              max-height: 48px;
+              font-size: 2.5em;
+              margin-bottom: 0px;
+              margin-top: 5px;
+
+            }
+          }
+        }
+      }
+      #links {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        ol {
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          padding-left: 15px;
+          justify-content: space-between;
+          a {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-size: 1.0em;
+            color: white;
+            text-decoration: none;
+            &:hover {
+              padding-top: 5px;
+              cursor: pointer;
+              }
+            }
+          }
+        }
+    }
+  }
+}
+
+
+
+
+
 
