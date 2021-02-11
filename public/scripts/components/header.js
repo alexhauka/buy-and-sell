@@ -86,18 +86,20 @@ $(() => {
 
   window.header.loadHeader = loadHeader;
 
-  loadHeader(undefined);
+  // Initial loading will not have user cookie.
+  header.loadHeader(undefined);
 
+  // Log in button logs in User 1. If you want to change user. See public/scripts/network.js
   $('header').on('click', '.nav-login', function() {
     logIn()
-    .then(() => loadHeader(1));
+      .then(() => header.loadHeader(1));
   });
 
   $('header').on('click', '.nav-logout', function() {
     logOut()
-    .then(() => {
-      loadHeader(undefined);
-    });
+      .then(() => {
+        header.loadHeader(undefined);
+      });
   });
 
   $('header').on('click', '.nav-my-items', function() {
