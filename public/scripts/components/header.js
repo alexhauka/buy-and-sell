@@ -33,9 +33,9 @@ $(() => {
         <div id ="search-bar">
             <button type ="button" id="cancel-button">x</button>
           <div>
-            <form>
+            <form class="quick-search">
               <label for="search-text">Search by item:</label>
-              <input type="text" id="search-text" name="search-text">
+              <input type="text" id="search-text" name="name">
               <button type ="submit" id="search-button">Search</button>
             </form>
           </div>
@@ -71,9 +71,9 @@ $(() => {
         <div id ="search-bar">
             <button type ="button" id="cancel-button">x</button>
           <div>
-            <form>
+            <form class="quick-search">
               <label for="search-text">Search by item:</label>
-              <input type="text" id="search-text" name="search-text">
+              <input type="text" id="search-text" name="name">
               <button type ="submit" id="search-button">Search</button>
             </form>
           </div>
@@ -150,5 +150,21 @@ $(() => {
         views_manager.show('favorites');
       })
       .catch(error => console.error(error));
+  });
+
+  $('header').on('submit', '.quick-search', function(event) {
+    event.preventDefault();
+
+    const params = $(this).serialize();
+
+    searchItems(params)
+      .then(data => {
+        items.showItems(data);
+        views_manager.show('items');
+      })
+      .catch((error) => {
+        console.error(error);
+        views_manager.show('items');
+      });
   });
 });
