@@ -27,6 +27,24 @@ const getItems = function(body) {
   });
 };
 
+const getMyItems = function() {
+  return $.ajax({
+    url: `/items/user`
+  });
+};
+
+const deleteItem = function(itemId) {
+  return $.ajax({
+    url: `/items/${itemId}/delete`,
+  })
+}
+
+const changeToSold = function(itemId) {
+  return $.ajax({
+    url: `/items/${itemId}/sold`,
+  });
+}
+
 const searchItems = function(params) {
   return $.ajax({
     url: `/search?${params}&limit=10`
@@ -56,12 +74,22 @@ const submitComment = function(body, id) {
   });
 };
 
-const getMessageByUser = function() {
+const getMessages = function() {
   console.log('getMessageByUser worked')
-    return $.ajax({
+  return $.ajax({
     method: 'GET',
     url: `/users/:id/messages`
   });
+};
+
+const submitMessage = function(body, otherId) {
+  return $.ajax({
+    method: 'POST',
+    url: `/users/:id/messages/${otherId}`,
+    data: {
+      message: body[0].value,
+    }
+  })
 }
 
 const getFavouritesByUser = function() {
@@ -70,4 +98,28 @@ const getFavouritesByUser = function() {
     method: 'GET',
     url: `/users/:id/favorites`
   });
+};
+
+const addItemToFavourites = function(body) {
+  return $.ajax({
+    method: 'POST',
+    url: `users/:id/favorites`,
+    data: { item_id: body },
+  });
+};
+
+const deleteFavorite = function(itemId) {
+  return $.ajax({
+    method: 'POST',
+    url: `users/:id/favorites/delete`,
+    data: { item_id: itemId },
+  })
 }
+
+const getUserToUserMessages = function (otherID) {
+  console.log('getUserToUserMessages worked')
+  return $.ajax({
+  method: 'GET',
+  url: `/users/:id/messages/${otherID}`
+  });
+};

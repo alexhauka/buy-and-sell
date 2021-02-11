@@ -1,7 +1,7 @@
 $(() => {
-  const createItemElem = function(item) {
+  const createMyItemElem = function(item) {
     return `
-      <article class="item" id="item_${item.id}">
+      <article class="my-item" id="my-item_${item.id}">
         <section class="item-thumbnail">
           <img src"${item.thumbnail_url}" alt="Item image">
         <section class="item-body">
@@ -14,38 +14,38 @@ $(() => {
     `
   }
 
-  const $items = $(`
+  const $myItems = $(`
     <section class="items" id="items">
       <p>Loading...</p>
     </section>
   `);
 
-  window.$items = $items;
+  window.$myItems = $myItems;
 
-  window.items = {};
+  window.myItems = {};
 
-  const showItems = function(data) {
-    $items.empty();
+  const showMyItems = function(data) {
+    $myItems.empty();
     data.forEach(datum => {
-      const item = createItemElem(datum);
-      $items.append(item);
+      const item = createMyItemElem(datum);
+      $myItems.append(item);
     });
   }
 
-  window.items.showItems = showItems;
+  window.myItems.showMyItems = showMyItems;
 
-  $('body').on('click', '.item', function() {
-    const itemId = $(this).attr('id').slice(5);
+  $('body').on('click', '.my-item', function() {
+    const itemId = $(this).attr('id').slice(8);
 
     getItem(itemId)
-      .then(data => item.showItem(data))
+      .then(data => myItem.showMyItem(data))
       .then(() => newCommentForm())
-      .then(() => $item.find('.new-comment').append($newComment))
+      .then(() => $myItem.find('.my-new-comment').append($newComment))
       .then(() => getComments(itemId))
       .then(data => comments.showComments(data))
-      .then(() => { 
-        $item.find('.comments').append($comments);
-        views_manager.show('item');
+      .then(() => {
+        $myItem.find('.my-comments').append($comments);
+        views_manager.show('myItem');  
       })
       .catch(err => console.error(err));
   });

@@ -11,6 +11,8 @@ $(() => {
     $searchItemForm.detach();
     $messages.detach();
     $favorites.detach();
+    $myItem.detach();
+    $myItems.detach();
 
     switch (page) {
       case 'item':
@@ -35,6 +37,14 @@ $(() => {
 
       case 'favorites':
         $favorites.appendTo($main);
+        break;
+
+      case 'myItems':
+        $myItems.appendTo($main);
+        break;
+      
+      case 'myItem':
+        $myItem.appendTo($main);
         break;
 
       case 'error': {

@@ -23,16 +23,6 @@ router.get('/', (req, res) => {
   });
 });
 
-
-//get /items/:id (get one)
-router.get('/:id', (req, res) => {
-  getItemById(req.params.id)
-  .then((item) => {
-    //res.render('whateverTheTemplateIs')
-    res.json(item)
-  });
-});
-
 // get /items/user (get a user's items)
 router.get('/user', (req, res) => {
   const userId = req.session.user_id
@@ -42,7 +32,14 @@ router.get('/user', (req, res) => {
   });
 });
 
-
+//get /items/:id (get one)
+router.get('/:id', (req, res) => {
+  getItemById(req.params.id)
+  .then((item) => {
+    //res.render('whateverTheTemplateIs')
+    res.json(item)
+  });
+});
 
 // //get /items/new
 // router.get('/new', (req, res) => {

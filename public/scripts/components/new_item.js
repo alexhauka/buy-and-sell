@@ -28,16 +28,24 @@ $(() => {
   $newItemForm.on('submit', function (event) {
     event.preventDefault();
     const params = $(this).serialize();
+
     submitItem(params)
       .then(data => {
-        console.log(data);
         item.showItem(data);
-        views_manager.show('item');
+        return data.id;
       })
-      .catch((error) => {
-        console.error(error);
-        views_manager.show('items');
+      .then((itemId) => getComments(itemId))
+      .then(data => comments.showComments(data))
+      .then(() => $comments.appendTo('.comments'))
+      .then(() => newCommentForm())
+      .then(() => $('.new-comment').append($newComment))
+      
+      .catch((error) => { 
+          console.error(error);
+          views_manager.show('items');
       })
+
+    views_manager.show('item');
   });
 
   $('body').on('click', '#item-form__cancel', function() {

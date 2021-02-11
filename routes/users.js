@@ -91,7 +91,7 @@ router.get('/:id/messages/:messageid', (req, res) => {
 router.post('/:id/favorites', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.user_id;
-    const itemId = req.body;
+    const itemId = req.body.item_id;
     addFavorite(userId, itemId)
     .then((item) => {
       res.send(item);
@@ -109,7 +109,7 @@ router.post('/:id/favorites', (req, res) => {
 router.post('/:id/favorites/delete', (req, res) => {
   if (req.session.user_id) {
     const userId = req.session.user_id;
-    const itemId = req.body;
+    const itemId = req.body.item_id;
     deleteFavorite(userId, itemId)
     //not sure if next two lines are needed
     .then(item => {
@@ -129,7 +129,7 @@ router.post('/:id/messages/:messageid', (req, res) => {
   if (req.session.user_id) {
     const senderId = req.session.user_id;
     const recId = req.params.messageid
-    sendMessage(req.body, senderId, recId)
+    sendMessage(req.body.message, senderId, recId)
     .then((message) => {
       res.send(message);
     })

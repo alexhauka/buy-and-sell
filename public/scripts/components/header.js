@@ -1,7 +1,6 @@
 $(() => {
   window.header = {};
 
-  let currentUser = null;
   const $header = $('.page-header');
   
   const loadHeader = function(user) {
@@ -24,6 +23,7 @@ $(() => {
               <ol>
                 <a class="nav-login">Login</a>
                 <a class="nav-register">Register</a>
+                <a class="nav-item-list">Items</a>
                 <a id="search-bar-link">Quick Search</a>
                 <a class="nav-search">Advanced Search</a>
               </ol>
@@ -55,10 +55,12 @@ $(() => {
             </div>
             <div id ="links">
               <ol>
-                <a class="nav-user-id" id="nav-user-id${user.id}">${user.name}</a>
+                <a class="nav-user-id">Logged in</a>
                 <a class="nav-new-item">New Post</a>
+                <a class="nav-my-items">My Items</a>
                 <a class="nav-messages">Messages</a>
                 <a class="nav-favourites">Favourites</a>
+                <a class="nav-item-list">Items</a>
                 <a id ="search-bar-link">Quick Search</a>
                 <a class="nav-search">Advanced Search</a>
                 <a class="nav-logout">Logout</a>
@@ -84,20 +86,11 @@ $(() => {
 
   window.header.loadHeader = loadHeader;
 
-  const getUserId = function() {
-    return $('header').find('.nav-user-id').attr('id').slice(11);
-  };
-
-  logIn()
-    .then(user => {
-      loadHeader(user);
-    });
+  loadHeader(undefined);
 
   $('header').on('click', '.nav-login', function() {
     logIn()
-    .then(user => {
-      loadHeader(user);
-    });
+    .then(() => loadHeader(1));
   });
 
   $('header').on('click', '.nav-logout', function() {
@@ -107,17 +100,26 @@ $(() => {
     });
   });
 
-  $('header').on('click', '.nav-home', function() {
+  $('header').on('click', '.nav-my-items', function() {
+    getMyItems()
+      .then(data => {
+        myItems.showMyItems(data);
+        views_manager.show('myItems');
+      })
+      .catch(err => console.error(err));
+  });
+
+  $('header').on('click', '.nav-new-item', function() {
+    views_manager.show('newItem');
+  });
+
+  $('header').on('click', '.nav-item-list', function() {
     getItems()
       .then(data => {
         items.showItems(data);
         views_manager.show('items');
       })
       .catch(error => console.error(error));
-  });
-
-  $('header').on('click', '.nav-new-item', function() {
-    views_manager.show('newItem');
   });
 
   $('header').on('click', '.nav-search', function() {
@@ -133,9 +135,7 @@ $(() => {
   });
 
   $('header').on('click', '.nav-messages', function() {
-    const userID = getUserId();
-    
-    getMessageByUser(userID)
+    getMessages()
       .then(msgObj => {
         messages.loadMessages(msgObj);
         views_manager.show('messages');
@@ -144,9 +144,7 @@ $(() => {
   });
 
   $('header').on('click', '.nav-favourites', function() {
-    const userID = getUserId();
-    
-    getFavouritesByUser(userID)
+    getFavouritesByUser()
       .then(favObj => {
         favorites.loadFavourites(favObj);
         views_manager.show('favorites');
