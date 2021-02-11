@@ -1,15 +1,15 @@
 -- Items table seeds here.
 
-insert into items (name, price, date_posted, is_sold, user_id) values ('Towels - Paper / Kraft', 8314, '2019-08-13 18:49:09', false, 90);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Tart - Raisin And Pecan', 7100, '2019-07-09 01:40:07', false, 170);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Lentils - Green Le Puy', 4012, '2019-12-27 10:22:17', true, 48);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Lady Fingers', 6421, '2020-02-12 06:36:03', true, 79);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - White, Pelee Island', 8186, '2020-06-10 21:27:20', true, 156);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Nut - Hazelnut, Whole', 1737, '2020-11-02 16:20:55', false, 61);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Melon - Cantaloupe', 4143, '2019-07-10 20:53:47', true, 56);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Bacardi Breezer - Strawberry', 7999, '2020-04-16 05:40:19', false, 64);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Gatorade - Cool Blue Raspberry', 9014, '2020-05-10 04:10:49', true, 90);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Turkey - Breast, Smoked', 3745, '2019-09-13 01:28:57', false, 72);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Towels - Paper / Kraft', 'XL roll of recycled paper towel', '../../img/paperTowel.jpeg', '../../img/paperTowel.jpeg', 8314, '2019-08-13 18:49:09', false, 90);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Tart - Raisin And Pecan', 'homemade raisin and pecan tarts!', '../../img/tarts.jpeg', '../../img/tarts.jpeg', 7100, '2019-07-09 01:40:07', false, 170);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lentils - Green Le Puy', 'best lentils in town, right here!', '../../img/lentils.jpeg', '../../img/lentils.jpeg', 4012, '2019-12-27 10:22:17', true, 48);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lady Fingers', 'secret recipe lady fingers.', '../../img/ladyFingers.jpeg', '../../img/ladyFingers.jpeg', 6421, '2020-02-12 06:36:03', true, 79);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Wine - White, Pelee Island', 'A very good year!!', '../../img/wine.jpeg', '../../img/wine.jpeg', 8186, '2020-06-10 21:27:20', true, 156);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Nut - Hazelnut, Whole', 'Exactly as it says. Good for roasting and making chocolate.', '../../img/hazelnuts.jpeg', '../../img/hazelnuts.jpeg', 1737, '2020-11-02 16:20:55', false, 61);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Melon - Cantaloupe', 'Does not come pre-sliced, morons.', '../../img/melon.jpeg', '../../img/melon.jpeg', 4143, '2019-07-10 20:53:47', true, 56);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Bacardi Breezer - Strawberry', 'DO NOT ICE SOMEONE WITH THIS', '../../img/breezer.jpeg', '../../img/breezer.jpeg', 7999, '2020-04-16 05:40:19', false, 64);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Gatorade - Cool Blue Raspberry', 'One of the last bottles of gatorade in the world, great for the day after you got iced', '../../img/gatorade.jpeg', '../../img/gatorade.jpeg', 9014, '2020-05-10 04:10:49', true, 90);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Turkey - Breast, Smoked', 'cherry-wood smoked for 38 hours', '../../img/turkey.jpeg', '../../img/turkey.jpeg', 3745, '2019-09-13 01:28:57', false, 72);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Mousse - Banana Chocolate', 1121, '2019-11-12 16:39:47', false, 89);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Calypso - Lemonade', 5599, '2020-12-20 19:27:27', false, 156);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Daves Island Stinger', 3079, '2020-04-21 08:26:34', false, 38);
@@ -26,11 +26,11 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Grapes -
 insert into items (name, price, date_posted, is_sold, user_id) values ('Longos - Chicken Wings', 6211, '2019-03-22 09:01:30', true, 196);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beer - Blue Light', 4389, '2020-11-28 14:53:17', false, 128);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lemonade - Strawberry, 591 Ml', 4914, '2019-07-07 18:10:32', true, 64);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Milk - Buttermilk', 4877, '2020-11-01 12:25:01', true, 150);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Milk - Buttermilk', 'real good for pancakes', '../../img/butterMilk.jpeg', '../../img/butterMilk.jpeg', 4877, '2020-11-01 12:25:01', true, 150);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Tabasco Sauce, 2 Oz', 2271, '2020-10-05 03:07:11', false, 149);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Strawberries', 6197, '2019-10-23 03:30:40', false, 200);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Juice - Grapefruit, 341 Ml', 4647, '2021-01-28 16:09:59', false, 97);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Goulash Seasoning', 2662, '2020-02-07 13:53:08', false, 198);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Goulash Seasoning', 'all in one seasoning for making a mean Goulash.', '../../img/seasoning.jpg', '../../img/seasoning.jpg', 2662, '2020-02-07 13:53:08', false, 198);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Red, Cabernet Sauvignon', 7812, '2019-10-29 22:48:32', false, 98);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Red, Lurton Merlot De', 7248, '2020-05-23 03:09:19', false, 108);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Dry Ice', 8682, '2019-10-02 15:51:36', false, 99);
@@ -59,7 +59,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Cardamon
 insert into items (name, price, date_posted, is_sold, user_id) values ('Onion - Dried', 3464, '2019-07-06 12:48:43', false, 6);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Tea - Darjeeling, Azzura', 3961, '2020-07-22 08:07:11', true, 145);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Swiss Chard - Red', 9543, '2020-04-02 17:19:05', false, 65);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Rosemary - Fresh', 'A bundle of rosemary, fresh from the garden!','../../img/rosemary.jpg', '../../img/rosemary.jpg', 3230, '2019-03-31 06:07:46', true, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Rosemary - Fresh', 'A bundle of rosemary, fresh from the garden!','../../img/rosemary.jpeg', '../../img/rosemary.jpeg', 3230, '2019-03-31 06:07:46', true, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Boogies', 7575, '2020-12-25 07:20:36', false, 111);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cookie Choc', 3289, '2019-05-24 14:04:25', true, 51);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Flour - Strong', 9863, '2020-09-19 21:07:40', true, 37);
@@ -78,8 +78,8 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Kumquat'
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lettuce - Boston Bib - Organic', 3223, '2019-04-30 00:31:22', true, 160);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rice - Long Grain', 5626, '2020-01-24 09:38:08', false, 164);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Nut - Pecan, Pieces', 7583, '2020-08-12 17:29:27', false, 76);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Nantucket Cranberry Juice', 5034, '2020-06-27 01:46:38', true, 133);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Milk - 2% 250 Ml', 8100, '2020-01-25 15:41:35', false, 61);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Nantucket Cranberry Juice', 'bottle of cranberry juice', '../../img/juice.jpg', '../../img/juice.jpg', 5034, '2020-06-27 01:46:38', true, 133);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Milk - 2% 250 Ml', 'What can I say, its milk.', '../../img/milkSmall.jpeg', '../../img/milkSmall.jpeg', 8100, '2020-01-25 15:41:35', false, 61);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sherbet - Raspberry', 6093, '2020-06-11 05:46:12', false, 10);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lettuce - Curly Endive', 3399, '2020-10-09 17:20:47', true, 145);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Mushroom - White Button', 2801, '2020-02-03 07:11:01', false, 137);
@@ -113,7 +113,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Oven Mit
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Charddonnay Errazuriz', 2481, '2019-05-26 15:43:27', true, 126);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Towel Dispenser', 4003, '2019-03-24 01:59:48', true, 79);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lid - 3oz Med Rec', 6536, '2019-03-28 01:49:02', true, 183);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Bread - Malt', 7385, '2019-03-14 04:56:37', true, 104);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Bread - Malt', 'Malt bread I made last night!', '../../img/bread.jpg', '../../img/bread.jpg',7385, '2019-03-14 04:56:37', true, 104);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Emulsifier', 7596, '2019-10-26 01:33:25', false, 112);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Foil - Round Foil', 4401, '2019-09-27 22:32:37', false, 124);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Apple - Fuji', 4385, '2019-09-26 20:56:40', true, 131);
@@ -142,7 +142,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - W
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lettuce - Boston Bib - Organic', 7261, '2020-01-13 06:00:52', false, 62);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pepper - Cubanelle', 8169, '2020-12-07 17:50:53', false, 117);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beans - Black Bean, Canned', 2708, '2020-11-14 19:07:18', false, 115);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Sugar - Palm', 7303, '2019-10-02 12:48:17', false, 25);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sugar - Palm', 'Palm sugar for your healthy-baking needs!', '../../img/sugar.jpg', '../../img/sugar.jpg', 7303, '2019-10-02 12:48:17', false, 25);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Cave Springs Dry Riesling', 6328, '2020-12-04 03:41:13', true, 81);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Water - Mineral, Natural', 2799, '2020-10-10 21:35:34', false, 145);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rice - Sushi', 6784, '2020-02-20 09:39:36', true, 100);
@@ -204,7 +204,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Veal - L
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lamb - Racks, Frenched', 3773, '2020-08-17 03:09:11', true, 86);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Flour - Strong Pizza', 8151, '2019-02-06 03:02:40', false, 45);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Soup Bowl Clear 8oz92008', 3514, '2020-11-06 16:54:43', true, 64);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Soda Water - Club Soda, 355 Ml', 'One can of club soda I found in my cellar', '../../img/soda.jpg','../../img/soda.jpg', 2811, '2020-06-10 09:34:01', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Soda Water - Club Soda, 355 Ml', 'One can of club soda I found in my cellar', '../../img/soda.jpeg','../../img/soda.jpeg', 2811, '2020-06-10 09:34:01', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Jam - Strawberry, 20 Ml Jar', 4257, '2020-09-19 01:02:31', false, 27);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pasta - Rotini, Colour, Dry', 2922, '2019-02-24 12:43:43', true, 82);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Alize Sunset', 3149, '2021-01-11 00:03:56', false, 11);
@@ -261,7 +261,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Chips Po
 insert into items (name, price, date_posted, is_sold, user_id) values ('Dried Apple', 7697, '2020-01-05 09:19:38', false, 40);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - White, Colubia Cresh', 7375, '2019-04-20 16:03:36', false, 51);
 insert into items (name, price, date_posted, is_sold, user_id) values ('External Supplier', 4834, '2019-10-22 00:29:26', false, 183);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Sugar - Palm', 6347, '2019-03-23 09:29:55', false, 96);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sugar - Palm','Palm sugar for your healthy-baking needs!', '../../img/sugar.jpg', '../../img/sugar.jpg', 6347, '2019-03-23 09:29:55', false, 96);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Almonds Ground Blanched', 9358, '2019-01-12 04:36:09', true, 184);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Swordfish Loin Portions', 5297, '2020-01-09 14:20:58', true, 110);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rabbit - Frozen', 9176, '2020-11-11 16:24:08', true, 185);
@@ -281,7 +281,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Cardamon
 insert into items (name, price, date_posted, is_sold, user_id) values ('Salsify, Organic', 1171, '2020-12-11 15:20:38', true, 23);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Canadian Emmenthal', 9018, '2020-05-27 03:06:13', true, 96);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Hog / Sausage Casing - Pork', 9460, '2020-08-20 23:28:33', false, 134);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lid - 10,12,16 Oz', 'A bunch of lids. What else did you expect?', , 4892, '2021-01-26 14:01:36', true, 187);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lid - 10,12,16 Oz', 'A bunch of lids. What else did you expect?','../../img/lids.jpg', '../../img/lids.jpg', 4892, '2021-01-26 14:01:36', true, 187);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pastry - Apple Muffins - Mini', 9375, '2020-02-22 06:23:00', false, 40);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Honey - Comb', 3976, '2020-07-12 16:05:19', false, 33);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Prosecco Valdobienne', 7383, '2020-11-05 23:48:14', true, 7);
@@ -336,7 +336,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Veal - B
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beans - Fine', 5107, '2020-10-31 15:55:32', true, 56);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Grenadine', 2185, '2020-05-02 20:31:17', false, 29);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Chicken - Ground', 7371, '2019-06-07 11:20:18', false, 131);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Milk Powder', 6331, '2019-05-16 21:17:46', true, 49);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Milk Powder', 'THIS IS THE BEST POWDER', '../../img/powderMilk2.jpeg', '../../img/powderMilk2.jpeg', 6331, '2019-05-16 21:17:46', true, 49);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Seabream Whole Farmed', 1683, '2020-10-27 18:08:16', false, 94);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Onions - White', 4997, '2019-03-21 03:35:05', true, 19);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Iced Tea Concentrate', 5251, '2020-04-08 06:36:12', false, 134);
@@ -360,7 +360,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Sausage 
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pork - Shoulder', 1671, '2020-05-03 03:00:31', true, 66);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pan Grease', 1761, '2020-12-17 15:30:40', false, 164);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sauce - Alfredo', 3341, '2019-08-10 21:53:10', true, 69);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Evaporated Milk - Skim', 8441, '2020-01-11 10:06:46', true, 172);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Evaporated Milk - Skim', 'It is evaporated. It is milk. You know the drill.', '../../img/evapMilk.jpeg', '../../img/evapMilk.jpeg', 8441, '2020-01-11 10:06:46', true, 172);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Croissants Thaw And Serve', 9470, '2020-09-17 19:58:07', false, 44);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beef - Ox Tongue, Pickled', 2683, '2019-08-05 09:22:39', true, 68);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Basil - Primerba, Paste', 4809, '2019-01-20 11:00:21', true, 196);
@@ -371,7 +371,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Buffalo 
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sprouts - Pea', 8216, '2019-01-30 03:49:19', false, 3);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Octopus', 3456, '2019-09-14 05:05:46', true, 149);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Coffee - Egg Nog Capuccino', 3590, '2019-10-26 20:28:25', true, 76);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Lid Tray - 16in Dome', 7606, '2019-01-21 08:57:01', true, 71);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lid Tray - 16in Dome', 'glass dome for a big food tray, tray not included', '../../img/dome.jpg', '../../img/dome.jpg', 7606, '2019-01-21 08:57:01', true, 71);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Salmon - Whole, 4 - 6 Pounds', 2432, '2020-10-14 17:09:16', false, 188);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Red, Antinori Santa', 1783, '2019-01-18 10:29:47', false, 187);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Container - Hngd Cll Blk 7x7x3', 6277, '2019-03-14 02:29:24', true, 121);
@@ -642,7 +642,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Veal - B
 insert into items (name, price, date_posted, is_sold, user_id) values ('Island Oasis - Magarita Mix', 1088, '2020-07-03 21:55:04', false, 147);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cheese - Ricotta', 7584, '2020-04-05 21:25:19', false, 96);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Oil - Sesame', 4482, '2020-06-17 00:47:32', true, 80);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Chocolate - Milk', 2568, '2020-03-24 22:16:38', false, 59);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Chocolate - Milk', 'Real good chocolate milk, BETTER THAN THE COMPETITION!!!', '../../img/chocMilk1.jpeg', '../../img/chocMilk1.jpeg', 2568, '2020-03-24 22:16:38', false, 59);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Chives - Fresh', 6094, '2020-05-26 15:33:04', false, 89);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rappini - Andy Boy', 9245, '2019-09-27 10:51:14', false, 141);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Muffin Orange Individual', 1354, '2020-01-12 01:41:49', true, 153);
@@ -655,9 +655,9 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Lobster 
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Sogrape Mateus Rose', 8905, '2019-05-01 16:46:00', false, 170);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Urban Zen Drinks', 7762, '2020-02-14 18:21:46', true, 99);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cheese - Wine', 8671, '2019-04-19 11:54:02', true, 152);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Chocolate - Milk', 6657, '2019-02-25 04:55:19', true, 104);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Chocolate - Milk', 'Worth every penny!', '../../img/chocMilk3.jpeg', '../../img/chocMilk3.jpeg', 6657, '2019-02-25 04:55:19', true, 104);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lettuce - Sea / Sea Asparagus', 1207, '2019-04-17 12:54:51', true, 91);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Chocolate - Pistoles, Lactee, Milk', 8681, '2021-02-02 15:59:40', true, 21);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Chocolate - Pistoles, Lactee, Milk', 'The fanciest Chocolate milk your post-apocolyptic currency can buy.', '../../img/chocMilk2.jpeg', '../../img/chocMilk2.jpeg', 8681, '2021-02-02 15:59:40', true, 21);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Hold Up Tool Storage Rack', 7208, '2019-02-13 10:49:35', true, 69);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Hinge W Undercut', 2924, '2020-10-28 22:50:53', true, 89);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Chips Potato Salt Vinegar 43g', 1171, '2020-01-28 20:38:46', true, 148);
@@ -695,7 +695,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Cheese -
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cream - 35%', 8842, '2020-06-18 03:29:38', true, 28);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Parasol Pick Stir Stick', 2029, '2020-01-23 18:46:41', false, 78);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sterno - Chafing Dish Fuel', 9218, '2019-08-19 01:08:09', false, 125);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Cape Capensis - Fillet', 7196, '2019-09-11 05:15:46', false, 2);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Cape Capensis - Fillet', 'Frozen fish fillet, scavenged from what remains of Trader Joes', '../../img/capensis.jpg', '../../img/capensis.jpg', 7196, '2019-09-11 05:15:46', false, 2);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Carbonated Water - Blackberry', 7664, '2019-03-09 19:18:19', false, 144);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cookie - Dough Variety', 5286, '2020-08-13 02:46:33', false, 52);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Duck - Legs', 8820, '2020-09-24 07:59:08', true, 11);
@@ -751,7 +751,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - M
 insert into items (name, price, date_posted, is_sold, user_id) values ('Oregano - Dry, Rubbed', 3714, '2020-06-03 17:47:15', false, 171);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Tart - Pecan Butter Squares', 5724, '2019-11-23 21:31:13', false, 46);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Filling - Mince Meat', 6204, '2019-11-17 12:12:00', false, 155);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Cod - Black Whole Fillet', 9388, '2020-02-11 05:54:12', true, 191);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Cod - Black Whole Fillet', 'an entire black cod fillet', '../../img/blackCod.jpg', '../../img/blackCod.jpg', 9388, '2020-02-11 05:54:12', true, 191);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Mousse - Mango', 3119, '2019-05-02 22:32:32', true, 174);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cookie - Oreo 100x2', 8945, '2019-06-29 22:10:54', true, 4);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beer - Camerons Cream Ale', 7254, '2020-10-11 00:09:20', true, 78);
@@ -891,7 +891,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Bacardi 
 insert into items (name, price, date_posted, is_sold, user_id) values ('Island Oasis - Mango Daiquiri', 3075, '2020-02-11 22:12:51', false, 23);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Trueblue - Blueberry', 7392, '2019-03-06 06:55:38', false, 147);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Zucchini - Green', 9795, '2021-01-17 19:00:08', false, 19);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Milk 2% 500 Ml', 7673, '2020-09-30 16:20:43', false, 76);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Milk 2% 500 Ml', 'Half a litre of the purest milk from the cow', '../../img/milkLarge.jpeg', '../../img/milkLarge.jpeg', 7673, '2020-09-30 16:20:43', false, 76);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Ham - Proscuitto', 3540, '2019-10-18 00:33:01', true, 191);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Soup - Campbells Beef Strogonoff', 7373, '2021-01-06 11:24:00', false, 121);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cranberry Foccacia', 8844, '2019-03-26 23:30:24', true, 173);
@@ -943,25 +943,25 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Turkey T
 insert into items (name, price, date_posted, is_sold, user_id) values ('Corn Syrup', 5928, '2020-06-18 05:38:26', false, 174);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Oven Mitts 17 Inch', 1798, '2019-04-02 10:30:19', false, 54);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rice - Basmati', 1968, '2019-08-02 00:13:14', false, 65);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Lemonade - Mandarin, 591 Ml', 8784, '2020-05-26 00:14:27', false, 182);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lemonade - Mandarin, 591 Ml', 'Bottle of lemonade, from concentrate (whatever the heck that means)', '../../img/lemonade.jpg', '../../img/lemonade.jpg', 8784, '2020-05-26 00:14:27', false, 182);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Napkin - Dinner, White', 4208, '2019-10-06 18:54:59', false, 139);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Chateau Aqueria Tavel', 1762, '2019-03-26 17:48:26', false, 188);
 insert into items (name, price, date_posted, is_sold, user_id) values ('French Pastry - Mini Chocolate', 3361, '2020-10-09 06:36:05', false, 170);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Jack Daniels', 8429, '2020-03-29 07:44:08', true, 66);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Potatoes - Idaho 80 Count', 5382, '2019-12-30 21:31:48', false, 132);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Potatoes - Idaho 80 Count', 'A big old bag of potatos, boil em mash em etc etc.', '../../img/potatos.jpg', '../../img/potatos.jpg', 5382, '2019-12-30 21:31:48', false, 132);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Scallops - U - 10', 9857, '2020-06-06 10:10:50', true, 86);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Venison - Denver Leg Boneless', 6386, '2020-08-30 01:44:34', true, 55);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Carbonated Water - Orange', 8022, '2020-11-22 08:25:54', true, 65);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cheese - Swiss Sliced', 7653, '2020-08-14 03:25:18', true, 172);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Chinese Foods - Pepper Beef', 2791, '2019-08-01 16:07:39', false, 126);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Jam - Apricot', 7965, '2019-12-15 23:27:38', false, 98);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Muffin Batt - Blueberry Passion', 'A pack of blueberry passion muffin mix', '../../img/muffin.jpg', '../../img/muffin.jpg', 3000, '2021-01-01 16:21:53', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Muffin Batt - Blueberry Passion', 'A pack of blueberry passion muffin mix', '../../img/muffin.jpeg', '../../img/muffin.jpeg', 3000, '2021-01-01 16:21:53', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sword Pick Asst', 7806, '2020-07-28 06:23:57', false, 144);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Quail - Whole, Boneless', 2514, '2020-03-01 20:15:48', false, 166);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Fat Bastard Merlot', 8038, '2019-02-01 12:11:10', false, 82);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Turkey - Breast, Double', 5910, '2019-05-02 15:40:28', false, 29);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beer - Fruli', 6779, '2019-04-12 05:56:12', true, 130);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sour Cream', 'Medium sized tub of sour cream, previously frozen so still good!!', '../../img/sourCream.jpg', '../../img/sourCream.jpg', 1815, '2020-10-20 16:30:02', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sour Cream', 'Medium sized tub of sour cream, previously frozen so still good!!', '../../img/sourCream.jpeg', '../../img/sourCream.jpeg', 1815, '2020-10-20 16:30:02', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beef - Outside, Round', 8082, '2019-09-21 19:13:49', false, 60);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lid Coffee Cup 8oz Blk', 2907, '2020-03-29 18:07:48', true, 17);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Kellogs Cereal In A Cup', 6118, '2019-04-14 11:12:52', true, 104);
@@ -997,6 +997,6 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - P
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Clavet Saint Emilion', 5531, '2019-06-29 14:03:12', true, 193);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lemonade - Natural, 591 Ml', 8800, '2019-04-09 13:28:47', true, 94);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Bagelers', 1206, '2019-04-06 15:26:35', false, 13);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Milk Powder', 5304, '2020-03-19 08:01:50', false, 147);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Milk Powder', 'I know there is a lot of milk powder out there, but this is the best!', '../../img/powderMilk1.jpeg', '../../img/powderMilk1.jpeg', 5304, '2020-03-19 08:01:50', false, 147);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Bar - Granola Trail Mix Fruit Nut', 3834, '2020-02-05 02:42:00', false, 115);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pork Casing', 1431, '2020-05-18 23:22:08', true, 44);
