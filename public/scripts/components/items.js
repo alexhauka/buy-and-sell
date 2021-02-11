@@ -16,7 +16,7 @@ $(() => {
           </div>
           <div class ="item-listing-detail">
             <div class ="item-price">
-              <h4>$${item.price}</h4>
+              <h4>$${(item.price / 100).toFixed(2)}</h4>
             </div>
             <div class ="item-details">
               <span>Posted By: ${item.user_name}</span><br>
