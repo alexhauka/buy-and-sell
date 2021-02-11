@@ -60,14 +60,14 @@ const submitItem = function(body) {
 
 const getComments = function(id) {
   return $.ajax({
-    url: `/items/${id}/comments`,
+    url: `/items/${id}`,
   });
 };
 
 const submitComment = function(body, id) {
   return $.ajax({
     method: 'POST',
-    url: `/items/${id}`,
+    url: `/items/${id}/comments`,
     data: {
       comment: body[0].value,
     }

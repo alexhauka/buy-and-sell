@@ -74,8 +74,8 @@ router.post('/', (req, res) => {
   };
 });
 
-//post items/:id  (comment on item)
-router.post('/:id', (req, res) => {
+//post items/:id/comments  (comment on item)
+router.post('/:id/comments', (req, res) => {
   if (req.session.user_id) {
     const itemId = req.params.id;
     const userId = req.session.user_id;
