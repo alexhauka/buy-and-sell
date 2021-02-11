@@ -1,5 +1,11 @@
 $(() => {
   const createDetailedItemElem = function(item) {
+    let soldOrNot;
+    if (item.is_sold) {
+      soldOrNot = 'Item Sold'
+    } else {
+      soldOrNot = 'Item Available'
+    }
     return `
       <article class="item-detail" id="item_id_${item.id}">
         <section class="item-image">
@@ -8,19 +14,19 @@ $(() => {
         <section class="item-name">
           <h4>${item.name}</h4>
           <span>${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
-          <span class="item-user-id" id="user_id_${item.user_id}">From User: ${item.user_name}</span>
+          <span class="item-user-id" id="user_id_${item.user_id}">Posted By: ${item.user_name}</span>
         </section>
-        <section class="item-detail">
+        <section class="item-detail" id ="tempID">
           <p>Description:<br>${item.description}</p>
           <div>
-            Price: ${(item.price / 100).toFixed(2)}
+            $${(item.price / 100).toFixed(2)}
           </div>
           <div>
-            SOLD: ${item.is_sold}
+            ${soldOrNot}
           </div>
-          <div id="add-to-favorites">
+          <span id="add-to-favorites">
             Add to Favorites
-          </div>
+          </span>
         </section>
         <section class="new-comment">
         </section>
