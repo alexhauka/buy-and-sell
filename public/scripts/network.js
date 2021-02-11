@@ -60,7 +60,7 @@ const submitItem = function(body) {
 
 const getComments = function(id) {
   return $.ajax({
-    url: `/items/${id}`,
+    url: `/items/${id}/comments`,
   });
 };
 
