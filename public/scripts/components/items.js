@@ -3,7 +3,7 @@ $(() => {
     return `
       <article class="item" id="item_${item.id}">
         <section class="item-thumbnail">
-          <img src"${item.thumbnail_url}" alt="Item image">
+          <img src="${item.thumbnail_url}" alt="Item image">
         <section class="item-body">
           <h4 class="item-listing-name">${item.name}</h4>
           <div class="item-listing-detail">
@@ -43,7 +43,7 @@ $(() => {
       .then(() => $item.find('.new-comment').append($newComment))
       .then(() => getComments(itemId))
       .then(data => comments.showComments(data))
-      .then(() => { 
+      .then(() => {
         $item.find('.comments').append($comments);
         views_manager.show('item');
       })

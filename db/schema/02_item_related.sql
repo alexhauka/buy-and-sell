@@ -10,7 +10,7 @@ CREATE TABLE items (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255),
   description TEXT DEFAULT 'Product description will be stored here.',
-  thumbnail_url VARCHAR(255) DEFAULT '/img/noimage.png',
+  thumbnail_url VARCHAR(255) DEFAULT '../../img/thumb_default.jpg',
   img_url VARCHAR(255) DEFAULT '/img/noimage.png',
   price INTEGER NOT NULL DEFAULT 0,
   date_posted TIMESTAMP NOT NULL,
