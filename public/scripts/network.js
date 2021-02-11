@@ -42,6 +42,7 @@ const deleteItem = function(itemId) {
 
 const changeToSold = function(itemId) {
   return $.ajax({
+    method: 'POST',
     url: `/items/${itemId}/sold`,
   });
 }

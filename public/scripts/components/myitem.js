@@ -49,7 +49,7 @@ $(() => {
     $myItem.append(item);
   };
 
-  $('body').on('click', '.delete-my-item', function() {
+  $('body').on('click', '#delete-my-item', function() {
     const itemId = $('.item-detail').attr('id').slice(8);
 
     deleteItem(itemId)
@@ -61,7 +61,7 @@ $(() => {
       .catch(err => console.error(err));
   });
 
-  $('body').on('click', '.change-to-sold', function() {
+  $('body').on('click', '#change-to-sold', function() {
     const itemId = $('.item-detail').attr('id').slice(8);
 
     changeToSold(itemId)
