@@ -1,0 +1,19 @@
+.item-detail {
+  margin: 10px;
+  margin-top: 135px;
+  .item-name {
+    h4 {
+      font-size: 2em;
+      font-family: 'Ubuntu Condensed', sans-serif;
+    }
+  }
+  #tempID {
+    margin-top: 0;
+    #add-to-favorites {
+      &:hover {
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

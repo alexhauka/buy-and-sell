@@ -1,0 +1,13 @@
+$mainPageBground: #3a3e45;
+$bground2: linear-gradient(to right, #2c3e50 ,    #bdc3c7);
+
+body {
+  background-color: white;
+  // background-image: $bground2;
+  font-family: 'Poppins', sans-serif;
+  // scroll-snap-type: y proximity;
+  // overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

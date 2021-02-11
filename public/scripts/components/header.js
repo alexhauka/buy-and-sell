@@ -2,7 +2,7 @@ $(() => {
   window.header = {};
 
   const $header = $('.page-header');
-  
+
   const loadHeader = function(user) {
     $header.find('.navigation-bar').empty();
     let navBar;
@@ -82,6 +82,7 @@ $(() => {
     }
 
     $header.find('.navigation-bar').append(navBar);
+    $('#search-bar').hide()
   }
 
   window.header.loadHeader = loadHeader;
