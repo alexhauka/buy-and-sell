@@ -11,6 +11,7 @@ const {
   editItem,
   deleteItem,
   getComments,
+  changeItemToSold,
   addComment
 } = require('../lib/item-queries');
 
@@ -129,6 +130,24 @@ router.post('/:id/delete', (req, res) => {
   } else {
     res.redirect('/');
   }
-})
+});
+
+//post items/:id/sold (change owned item to sold
+router.post('/:id/sold', (req, res) => {
+  if (req.session.user_id) {
+    const itemId = req.params.id;
+    const userId = req.session.user_id;
+    changeItemToSold(itemId, userId)
+      .then(item => {
+        res.send(item);
+      })
+      .catch(e => {
+        console.error(e);
+        res.send(e);
+      });
+  } else {
+    res.redirect('/');
+  }
+});
 
 module.exports = router;
