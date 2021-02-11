@@ -1,24 +1,28 @@
 $(() => {
   const createFavouritesHTML = function (favObj) {
+    console.log(favObj)
     let soldOrNot;
     if (favObj.is_sold) {
-      soldOrNot = 'Yeah'
+      soldOrNot = 'Item Has Been Sold'
     } else {
-      soldOrNot = 'Nah'
+      soldOrNot = 'Item Available'
     }
 
     return `
-    <article class="favorited-item" id="favorite_id_${favObj.id}">
-      <p>${favObj.name}</p>
-      <div>
-        <span>Description: ${favObj.description}</span><br>
-        <span>Price: ${favObj.price}</span><br>
-        <span>Listed By: ${favObj.user_id}</span><br>
-        <span>Date Posted: ${favObj.date_posted.slice(0, 19).replace('T', ' ')}</span><br>
-        <span>Sold? ${soldOrNot}</span>
-        <div class="delete-favorite">Delete favorite</div>
-      </div>
-    </article>
+      <article class="favorited-item" id="favorite_id_${favObj.id}">
+        <div class ="favorited-item-img">
+          <span>img goes here</span>
+        </div>
+        <div class ="favorited-item-description">
+          <h4>${favObj.name}</h4>
+          <span>Description: ${favObj.description}</span><br>
+          <span>$${favObj.price}</span><br>
+          <span>Posted By: ${favObj.user_id}</span><br>
+          <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span><br>
+          <span>${soldOrNot}</span>
+          <div class="delete-favorite">Delete Favorite</div>
+        </div>
+      </article>
     `
   }
 

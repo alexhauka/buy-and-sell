@@ -1,0 +1,43 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  .favorited-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+    height: 25vh;
+    border: 3px solid black;
+    border-radius: 25px;
+    overflow: auto;
+    min-width: 525px;
+    max-width: 525px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .favorited-item-description {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 1em;
+        align-self: center;
+      }
+      span {
+        font-size: 0.75em;
+      }
+      .delete-favorite {
+        font-size: 1em;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
