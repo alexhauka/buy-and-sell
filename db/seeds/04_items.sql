@@ -59,7 +59,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Cardamon
 insert into items (name, price, date_posted, is_sold, user_id) values ('Onion - Dried', 3464, '2019-07-06 12:48:43', false, 6);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Tea - Darjeeling, Azzura', 3961, '2020-07-22 08:07:11', true, 145);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Swiss Chard - Red', 9543, '2020-04-02 17:19:05', false, 65);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Rosemary - Fresh', 3230, '2019-03-31 06:07:46', true, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Rosemary - Fresh', 'A bundle of rosemary, fresh from the garden!','../../img/rosemary.jpg', '../../img/rosemary.jpg', 3230, '2019-03-31 06:07:46', true, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Boogies', 7575, '2020-12-25 07:20:36', false, 111);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cookie Choc', 3289, '2019-05-24 14:04:25', true, 51);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Flour - Strong', 9863, '2020-09-19 21:07:40', true, 37);
@@ -204,7 +204,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Veal - L
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lamb - Racks, Frenched', 3773, '2020-08-17 03:09:11', true, 86);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Flour - Strong Pizza', 8151, '2019-02-06 03:02:40', false, 45);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Soup Bowl Clear 8oz92008', 3514, '2020-11-06 16:54:43', true, 64);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Soda Water - Club Soda, 355 Ml', 2811, '2020-06-10 09:34:01', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Soda Water - Club Soda, 355 Ml', 'One can of club soda I found in my cellar', '../../img/soda.jpg','../../img/soda.jpg', 2811, '2020-06-10 09:34:01', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Jam - Strawberry, 20 Ml Jar', 4257, '2020-09-19 01:02:31', false, 27);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pasta - Rotini, Colour, Dry', 2922, '2019-02-24 12:43:43', true, 82);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Alize Sunset', 3149, '2021-01-11 00:03:56', false, 11);
@@ -955,13 +955,13 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Carbonat
 insert into items (name, price, date_posted, is_sold, user_id) values ('Cheese - Swiss Sliced', 7653, '2020-08-14 03:25:18', true, 172);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Chinese Foods - Pepper Beef', 2791, '2019-08-01 16:07:39', false, 126);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Jam - Apricot', 7965, '2019-12-15 23:27:38', false, 98);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Muffin Batt - Blueberry Passion', 3000, '2021-01-01 16:21:53', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Muffin Batt - Blueberry Passion', 'A pack of blueberry passion muffin mix', '../../img/muffin.jpg', '../../img/muffin.jpg', 3000, '2021-01-01 16:21:53', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Sword Pick Asst', 7806, '2020-07-28 06:23:57', false, 144);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Quail - Whole, Boneless', 2514, '2020-03-01 20:15:48', false, 166);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Fat Bastard Merlot', 8038, '2019-02-01 12:11:10', false, 82);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Turkey - Breast, Double', 5910, '2019-05-02 15:40:28', false, 29);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beer - Fruli', 6779, '2019-04-12 05:56:12', true, 130);
-insert into items (name, price, date_posted, is_sold, user_id) values ('Sour Cream', 1815, '2020-10-20 16:30:02', false, 1);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sour Cream', 'Medium sized tub of sour cream, previously frozen so still good!!', '../../img/sourCream.jpg', '../../img/sourCream.jpg', 1815, '2020-10-20 16:30:02', false, 1);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Beef - Outside, Round', 8082, '2019-09-21 19:13:49', false, 60);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Lid Coffee Cup 8oz Blk', 2907, '2020-03-29 18:07:48', true, 17);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Kellogs Cereal In A Cup', 6118, '2019-04-14 11:12:52', true, 104);

@@ -16,7 +16,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-01-29 20:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-07-08 19:18:39', 418, 46);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-12-26 00:14:12', 66, 59);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-12-10 15:41:57', 854, 73);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-10 12:43:57', 1, 15);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Hey I got a proposition for you','2020-08-10 12:43:57', 1, 15);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-01-06 18:43:22', 591, 76);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-06-07 14:43:36', 652, 30);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-10-18 15:00:03', 642, 58);
@@ -121,11 +121,11 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-11-23 12:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-02-24 22:46:28', 183, 53);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-09-25 22:22:21', 543, 36);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-11-04 00:07:59', 912, 47);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-24 12:39:12', 398, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Alright I will think about it', '2020-08-24 12:39:12', 398, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-01-24 09:50:38', 290, 65);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-19 21:49:30', 651, 15);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-04-18 14:23:19', 586, 30);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-28 04:01:15', 945, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Could you take a look and see if it is in good shape?', '2020-07-28 04:01:15', 945, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-04-28 15:11:36', 543, 98);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-02-19 18:50:45', 443, 77);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-09 00:19:43', 877, 88);
@@ -211,7 +211,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-06 14:
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-03-12 01:51:12', 437, 87);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-07 14:32:22', 138, 22);
 insert into messages (sent_date, sender_id, receiver_id) values ('2021-01-07 21:49:08', 318, 10);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-17 07:17:32', 814, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('How old is the item? Does it expire soon?', '2020-07-17 07:17:32', 814, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-07 20:59:01', 368, 91);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-02-02 03:16:30', 544, 51);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-05-07 03:40:22', 598, 85);
@@ -302,7 +302,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2019-04-25 01:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-03-06 19:51:00', 197, 89);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-15 08:21:36', 226, 39);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-01-06 11:23:43', 959, 63);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-09-28 14:56:40', 854, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Hey it says that you sold it already, what gives?!', '2020-09-28 14:56:40', 854, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-02 07:24:56', 854, 91);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-12 02:57:27', 305, 95);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-02-21 00:10:17', 55, 49);
@@ -313,7 +313,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2019-11-28 17:
 insert into messages (sent_date, sender_id, receiver_id) values ('2021-01-17 01:52:29', 275, 13);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-03-14 02:15:48', 980, 92);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-09-30 01:22:17', 474, 30);
-insert into messages (sent_date, sender_id, receiver_id) values ('2019-08-28 19:06:04', 380, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Ooooo I like what I see!', '2019-08-28 19:06:04', 380, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-20 12:35:56', 602, 52);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-07-13 06:24:59', 802, 36);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-06 22:00:00', 691, 95);
@@ -525,7 +525,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-27 18:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-07-13 12:16:39', 103, 44);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-02-03 07:13:28', 897, 40);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-01-01 11:57:47', 560, 30);
-insert into messages (sent_date, sender_id, receiver_id) values ('2019-04-05 10:21:27', 368, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Look buddy, you are being a little over the top about this.', '2019-04-05 10:21:27', 368, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-26 14:25:27', 386, 34);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-09-29 19:39:54', 153, 60);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-01-16 11:57:18', 454, 87);
@@ -533,7 +533,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-03-11 18:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-07-02 12:45:34', 45, 28);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-07-17 07:01:44', 908, 48);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-02 03:55:26', 860, 32);
-insert into messages (sent_date, sender_id, receiver_id) values ('2019-07-24 05:04:29', 419, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('OMG I NEED THIS', '2019-07-24 05:04:29', 419, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-09-28 19:41:42', 2, 88);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-14 16:15:58', 744, 49);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-05-29 15:33:21', 550, 63);
@@ -722,7 +722,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-11 05:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-02-22 14:48:40', 855, 76);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-03-16 19:12:54', 335, 68);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-08-07 18:37:16', 330, 39);
-insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-05 22:39:39', 461, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('Yo. What color is it?', '2019-05-05 22:39:39', 461, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-12-16 02:44:05', 747, 14);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-05-03 09:23:06', 704, 54);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-13 11:01:26', 270, 12);
@@ -762,7 +762,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-08 12:
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-10-30 19:40:21', 74, 66);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-03-05 10:19:07', 202, 26);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-08-18 16:00:04', 653, 73);
-insert into messages (sent_date, sender_id, receiver_id) values ('2019-06-22 00:29:06', 251, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('I am pretttty sure you just put a stock photo up, can you send me a real pic plz?', '2019-06-22 00:29:06', 251, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-11-21 01:02:09', 47, 45);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-12-12 08:04:23', 970, 97);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-12-13 13:47:58', 529, 16);
@@ -992,7 +992,7 @@ insert into messages (sent_date, sender_id, receiver_id) values ('2020-10-30 00:
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-04-28 01:37:58', 362, 87);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-06-07 23:58:15', 194, 33);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-05-11 14:41:33', 991, 22);
-insert into messages (sent_date, sender_id, receiver_id) values ('2020-06-26 22:05:59', 877, 1);
+insert into messages (message, sent_date, sender_id, receiver_id) values ('I sure the government is not spying on these...', '2020-06-26 22:05:59', 877, 1);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-03-22 15:51:36', 590, 54);
 insert into messages (sent_date, sender_id, receiver_id) values ('2020-03-19 23:05:41', 423, 30);
 insert into messages (sent_date, sender_id, receiver_id) values ('2019-09-24 05:35:32', 437, 42);

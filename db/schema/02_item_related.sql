@@ -11,7 +11,7 @@ CREATE TABLE items (
   name VARCHAR(255),
   description TEXT DEFAULT 'Product description will be stored here.',
   thumbnail_url VARCHAR(255) DEFAULT '../../img/thumb_default.jpg',
-  img_url VARCHAR(255) DEFAULT '/img/noimage.png',
+  img_url VARCHAR(255) DEFAULT '../../img/thumb_default.jpg',
   price INTEGER NOT NULL DEFAULT 0,
   date_posted TIMESTAMP NOT NULL,
   is_sold BOOLEAN NOT NULL DEFAULT FALSE,

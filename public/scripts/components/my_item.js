@@ -3,7 +3,7 @@ $(() => {
     return `
       <article class="item-detail" id="item_id_${item.id}">
         <section class="item-image">
-          <imb src="${item.img_url}" alt="None"></imb>
+          <img src="${item.img_url}" alt="None"></imb>
         </section>
         <section class="item-name">
           <h4>${item.name}</h4>
