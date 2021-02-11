@@ -33,8 +33,8 @@ router.get('/:id', (req, res) => {
   });
 });
 
-// get /items/user/:id  (get a user's items)
-router.get('/user/:id', (req, res) => {
+// get /items/user (get a user's items)
+router.get('/user', (req, res) => {
   const userId = req.session.user_id
   getUserItems(userId)
   .then((items) => {
