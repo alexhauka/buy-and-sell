@@ -125,13 +125,13 @@ $(() => {
   $('header').on('click', '#search-bar-link', function() {
     $('.quick-search-dropdown').empty()
     $header.find('.quick-search-dropdown').append(quickSearchDropdown);
-    $('.items').css('margin-top', 0)
-    $('.quick-search-dropdown').slideDown()
+    $('.page-main').css('margin-top', 0)
+    $('.quick-search-dropdown').show()
   });
 
   $('header').on('click', '#cancel-button', function() {
-    $('.items').css('margin-top', 126)
-    $('.quick-search-dropdown').slideUp()
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
   });
 
   $('header').on('click', '.nav-messages', function() {
