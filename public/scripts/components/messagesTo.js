@@ -43,7 +43,7 @@ $(() => {
     views_manager.show('messages');
   });
 
-  $('body').on('click', '#new-comment__cancel', function() {
+  $('body').on('click', '#new-message__cancel', function() {
     views_manager.show('items');
     return false;
   });

@@ -7,7 +7,7 @@ $(() => {
         <section class="item-body">
           <h4 class="item-listing-name">${item.name}</h4>
           <div class="item-listing-detail">
-            Price: ${item.price}
+            Price: $${(item.price / 100).toFixed(2)}
           </div>
         </section>
       </article>

@@ -13,7 +13,7 @@ $(() => {
         <section class="item-detail">
           <p>Description:<br>${item.description}</p>
           <div>
-            Price: ${(item.price / 100).toFixed(2)}
+            Price: $${(item.price / 100).toFixed(2)}
           </div>
           <div>
             SOLD: ${item.is_sold}
