@@ -54,8 +54,8 @@ $(() => {
 
   window.items.showItems = showItems;
 
-  $('body').on('click', '.item', function() {
-    const itemId = $(this).attr('id').slice(5);
+  $('body').on('click', '.more-details-sidebar', function() {
+    const itemId = $(this).parent().find('.item').attr('id').slice(5);
 
     getItem(itemId)
       .then(data => item.showItem(data))

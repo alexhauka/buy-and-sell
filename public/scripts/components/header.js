@@ -6,6 +6,7 @@ $(() => {
   const loadHeader = function(user) {
     $header.find('.navigation-bar').empty();
     let navBar;
+    let quickSearchDropdown;
 
     if (!user) {
       navBar = `
@@ -28,16 +29,6 @@ $(() => {
                 <a class="nav-search">Advanced Search</a>
               </ol>
             </div>
-          </div>
-        </div>
-        <div id ="search-bar">
-            <button type ="button" id="cancel-button">x</button>
-          <div>
-            <form class="quick-search">
-              <label for="search-text">Search by item:</label>
-              <input type="text" id="search-text" name="name">
-              <button type ="submit" id="search-button">Search</button>
-            </form>
           </div>
         </div>
       `
@@ -68,21 +59,24 @@ $(() => {
             </div>
           </div>
         </div>
-        <div id ="search-bar">
-            <button type ="button" id="cancel-button">x</button>
+      `
+    }
+    quickSearchDropdown = `
+      <div id ="search-bar">
           <div>
             <form class="quick-search">
               <label for="search-text">Search by item:</label>
               <input type="text" id="search-text" name="name">
               <button type ="submit" id="search-button">Search</button>
+              <button type ="button" id="cancel-button">Cancel</button>
             </form>
           </div>
-        </div>
-      `
-    }
+      </div>
+    `
 
     $header.find('.navigation-bar').append(navBar);
-    $('#search-bar').hide()
+    $header.find('.quick-search-dropdown').append(quickSearchDropdown);
+    $('.quick-search-dropdown').hide()
   }
 
   window.header.loadHeader = loadHeader;
@@ -130,11 +124,13 @@ $(() => {
   });
 
   $('header').on('click', '#search-bar-link', function() {
-    $('#search-bar').slideDown()
+    $('.items').css('margin-top', 0)
+    $('.quick-search-dropdown').slideDown()
   });
 
   $('header').on('click', '#cancel-button', function() {
-    $('#search-bar').slideUp()
+    $('.items').css('margin-top', 126)
+    $('.quick-search-dropdown').slideUp()
   });
 
   $('header').on('click', '.nav-messages', function() {
