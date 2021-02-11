@@ -65,9 +65,9 @@ $(() => {
     const itemId = $('.item-detail').attr('id').slice(8);
 
     changeToSold(itemId)
-      .then(() => getMyItem())
+      .then(() => getMyItems())
       .then(data => {
-        myItem.showMyItem(data);
+        myItems.showMyItems(data);
         views_manager.show('myItems');
       })
       .catch(err => console.error(err));
