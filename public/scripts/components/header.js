@@ -6,7 +6,6 @@ $(() => {
   const loadHeader = function(user) {
     $header.find('.navigation-bar').empty();
     let navBar;
-    let quickSearchDropdown;
 
     if (!user) {
       navBar = `
@@ -61,23 +60,23 @@ $(() => {
         </div>
       `
     }
-    quickSearchDropdown = `
-      <div id ="search-bar">
-          <div>
-            <form class="quick-search">
-              <label for="search-text">Search by item:</label>
-              <input type="text" id="search-text" name="name">
-              <button type ="submit" id="search-button">Search</button>
-              <button type ="button" id="cancel-button">Cancel</button>
-            </form>
-          </div>
-      </div>
-    `
 
     $header.find('.navigation-bar').append(navBar);
-    $header.find('.quick-search-dropdown').append(quickSearchDropdown);
     $('.quick-search-dropdown').hide()
   }
+
+  const quickSearchDropdown = `
+    <div id ="search-bar">
+        <div>
+          <form class="quick-search">
+            <label for="search-text">Search by item:</label>
+            <input type="text" id="search-text" name="name">
+            <button type ="submit" id="search-button">Search</button>
+            <button type ="button" id="cancel-button">Cancel</button>
+          </form>
+        </div>
+    </div>
+  `
 
   window.header.loadHeader = loadHeader;
 
@@ -124,6 +123,8 @@ $(() => {
   });
 
   $('header').on('click', '#search-bar-link', function() {
+    $('.quick-search-dropdown').empty()
+    $header.find('.quick-search-dropdown').append(quickSearchDropdown);
     $('.items').css('margin-top', 0)
     $('.quick-search-dropdown').slideDown()
   });
