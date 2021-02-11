@@ -1,7 +1,8 @@
 $(() => {
   const createItemElem = function(item) {
     return `
-      <article class="item" id="item_${item.id}">
+    <article>
+      <section class="item" id="item_${item.id}">
         <section class="item-thumbnail">
           <img src="${item.thumbnail_url}" alt="Item image">
         </section>
@@ -20,11 +21,16 @@ $(() => {
             </div>
             <div class ="item-details">
               <span>Posted By: ${item.user_name}</span><br>
-              <span>Posted On: ${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
+              <span>Posted On: ${item.date_posted.slice(0, 11).replace('T', ' ')}</span>
             </div>
           </div>
         </section>
-      </article>
+      </section>
+      <div class ="more-details-sidebar">
+        <span>More Details</span>
+        <span id ="arrow-img"><img src="https://img.icons8.com/metro/26/000000/circled-right-2.png"/></span>
+      </div>
+    </article>
     `
   }
 

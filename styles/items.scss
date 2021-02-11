@@ -4,60 +4,92 @@
   margin-top: 126px;
   padding-top: 10px;
   max-width: 100vw;
-  .item {
+  article {
+    margin-left: 15%;
+    margin-right: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    height: 25vh;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: 3px solid black;
-    border-radius: 25px;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    .item-thumbnail {
-      height: 100%;
-      padding: 15px;
-      width: 40%;
-      img {
-
+    .more-details-sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 7px;
+      height: 150px;
+      width: 150px;
+      margin-top: 15px;
+      visibility: hidden;
+      font-size: 0.85em;
+      &:hover {
+        cursor: pointer;
+      }
+      #arrow-img {
+        padding-left: 25px;
+        padding-top: 5px;
       }
     }
-    .item-body {
+    .item {
       display: flex;
       flex-direction: row;
-      width: 60%;
-      height: 100%;
-      padding: 10px;
-      padding-left: 0;
-      .item-name-and-description {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        .item-name {
-
-        }
-        .item-description {
-          font-size: 0.75em;
-        }
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 6%;
+      height: 25vh;
+      border: 3px solid black;
+      border-radius: 25px;
+      overflow: auto;
+      min-width: 525px;
+      max-width: 525px;
+      &::-webkit-scrollbar {
+        display: none;
       }
-      .item-listing-detail {
+      &:hover {
+        cursor: pointer;
+      }
+      .item-thumbnail {
+        height: 100%;
+        padding: 15px;
+        width: 40%;
         display: flex;
-        flex-direction: column;
-        padding: 10px;
-        .item-price {
-
-        }
-        .item-details {
-          font-size: 0.75em;
+        justify-content: center;
+        img {
 
         }
       }
+      .item-body {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        height: 100%;
+        padding: 10px;
+        padding-left: 0;
+        .item-name-and-description {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          .item-name {
+
+          }
+          .item-description {
+            font-size: 0.75em;
+          }
+        }
+        .item-listing-detail {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          .item-price {
+
+          }
+          .item-details {
+            font-size: 0.75em;
+          }
+        }
+      }
+    }
+    &:hover .more-details-sidebar {
+      visibility: visible;
     }
   }
 }
