@@ -281,7 +281,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Cardamon
 insert into items (name, price, date_posted, is_sold, user_id) values ('Salsify, Organic', 1171, '2020-12-11 15:20:38', true, 23);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Canadian Emmenthal', 9018, '2020-05-27 03:06:13', true, 96);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Hog / Sausage Casing - Pork', 9460, '2020-08-20 23:28:33', false, 134);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lid - 10,12,16 Oz', 4892, '2021-01-26 14:01:36', true, 187);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Lid - 10,12,16 Oz', 'A bunch of lids. What else did you expect?', , 4892, '2021-01-26 14:01:36', true, 187);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Pastry - Apple Muffins - Mini', 9375, '2020-02-22 06:23:00', false, 40);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Honey - Comb', 3976, '2020-07-12 16:05:19', false, 33);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - Prosecco Valdobienne', 7383, '2020-11-05 23:48:14', true, 7);
