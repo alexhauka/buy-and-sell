@@ -1,5 +1,6 @@
 $(() => {
   const createCommentElem = function(comment) {
+    console.log(comment)
     return `
       <article class="comment" id="comment_${comment.id}">
         <section>

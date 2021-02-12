@@ -1,18 +1,27 @@
 .item-detail {
   margin: 10px;
-  margin-top: 135px;
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .item-name {
     h4 {
       font-size: 2em;
       font-family: 'Ubuntu Condensed', sans-serif;
+      text-align: center;
     }
   }
-  #tempID {
+  .tempID {
     margin-top: 0;
-    #add-to-favorites {
+    .add-to-favorites {
       &:hover {
         margin-top: 5px;
         cursor: pointer;
+      }
+      img {
+        height: 10px;
+        width: 10px;
       }
     }
   }

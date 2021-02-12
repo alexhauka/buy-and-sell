@@ -10,13 +10,13 @@ $(() => {
       <article class="item-detail" id="item_id_${item.id}">
         <section class="item-image">
           <img src="${item.img_url}" alt="None">
-        </section>
-        <section class="item-name">
           <h4>${item.name}</h4>
+          </section>
+        <section class="item-description">
           <span>${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
           <span class="item-user-id" id="user_id_${item.user_id}">Posted By: ${item.user_name}</span>
         </section>
-        <section class="item-detail" id ="tempID">
+        <section class="tempID">
           <p>Description:<br>${item.description}</p>
           <div>
             $${(item.price / 100).toFixed(2)}
@@ -24,8 +24,8 @@ $(() => {
           <div>
             ${soldOrNot}
           </div>
-          <span id="add-to-favorites">
-            Add to Favorites
+          <span class="add-to-favorites">
+            Favorite <img src="https://img.icons8.com/color/48/000000/like--v3.png"/>
           </span>
         </section>
         <section class="new-comment">
