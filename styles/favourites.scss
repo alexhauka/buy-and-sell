@@ -2,42 +2,74 @@
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  .favorited-item {
+  .favorites-article {
+    margin-left: 15%;
+    margin-right: 8.5%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20%;
-    height: 25vh;
-    border: 3px solid black;
-    border-radius: 25px;
-    overflow: auto;
-    min-width: 525px;
-    max-width: 525px;
     margin-bottom: 20px;
     margin-top: 20px;
-    &::-webkit-scrollbar {
-      display: none;
+    &:hover .delete-favorite {
+      visibility: visible;
     }
-    .favorited-item-description {
+    .delete-favorite {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      padding-left: 7px;
+      margin-left: 5px;
+      height: 60px;
+      width: 200px;
+      margin-top: 55px;
+      visibility: hidden;
+      font-size: 0.75em;
+      border: 2px solid black;
+      background-color: red;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .favorited-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 6%;
+      height: 25vh;
+      border: 3px solid black;
+      border-radius: 25px;
+      overflow: auto;
+      min-width: 525px;
+      max-width: 525px;
+      // margin-bottom: 20px;
+      // margin-top: 20px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .favorited-item-img {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        img {
 
-      h4 {
-        font-size: 1em;
-        align-self: center;
+        }
       }
-      span {
-        font-size: 0.75em;
-      }
-      .delete-favorite {
-        font-size: 1em;
-        &:hover {
-          cursor: pointer;
+      .favorited-item-description {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        width: 50%;
+        h4 {
+          font-size: 1em;
+          align-self: center;
+        }
+        span {
+          font-size: 0.75em;
         }
       }
     }
   }
 }
+
 
 

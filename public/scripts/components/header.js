@@ -85,11 +85,15 @@ $(() => {
 
   // Log in button logs in User 1. If you want to change user. See public/scripts/network.js
   $('header').on('click', '.nav-login', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     logIn()
       .then(() => header.loadHeader(1));
   });
 
   $('header').on('click', '.nav-logout', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     logOut()
       .then(() => {
         header.loadHeader(undefined);
@@ -97,6 +101,8 @@ $(() => {
   });
 
   $('header').on('click', '.nav-my-items', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     getMyItems()
       .then(data => {
         myItems.showMyItems(data);
@@ -106,10 +112,14 @@ $(() => {
   });
 
   $('header').on('click', '.nav-new-item', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     views_manager.show('newItem');
   });
 
   $('header').on('click', '.nav-item-list', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     getItems()
       .then(data => {
         items.showItems(data);
@@ -119,6 +129,8 @@ $(() => {
   });
 
   $('header').on('click', '.nav-search', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     views_manager.show('searchItem');
   });
 
@@ -135,6 +147,8 @@ $(() => {
   });
 
   $('header').on('click', '.nav-messages', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     getMessages()
       .then(msgObj => {
         messages.loadMessages(msgObj);
@@ -144,6 +158,8 @@ $(() => {
   });
 
   $('header').on('click', '.nav-favourites', function() {
+    $('.page-main').css('margin-top', 120)
+    $('.quick-search-dropdown').hide()
     getFavouritesByUser()
       .then(favObj => {
         favorites.loadFavourites(favObj);

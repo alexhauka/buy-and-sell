@@ -9,20 +9,24 @@ $(() => {
     }
 
     return `
-      <article class="favorited-item" id="favorite_id_${favObj.id}">
+    <article class ="favorites-article">
+      <section class="favorited-item" id="favorite_id_${favObj.id}">
         <div class ="favorited-item-img">
           <img src ="${favObj.img_url}">
         </div>
         <div class ="favorited-item-description">
-          <h4>${favObj.name}</h4>
-          <span>Description: ${favObj.description}</span><br>
-          <span>$${favObj.price}</span><br>
-          <span>Posted By: ${favObj.user_id}</span><br>
-          <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span><br>
+          <h4>${favObj.name} ($${(favObj.price / 100).toFixed(2)})</h4>
+          <span>Description: ${favObj.description}</span>
+          <span>Posted By: ${favObj.user_id}</span>
+          <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span>
           <span>${soldOrNot}</span>
-          <div class="delete-favorite">Delete Favorite</div>
+
         </div>
-      </article>
+      </section>
+      <div class="delete-favorite">
+        <span>Delete Favorite</span>
+      </div>
+    </article>
     `
   }
 
