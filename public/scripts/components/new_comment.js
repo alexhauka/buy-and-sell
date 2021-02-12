@@ -2,13 +2,14 @@ $(() => {
   const createNewCommentForm = function() {
     return `
       <form class="new-comment-form">
+        <p>Leave a comment:</p>
         <div>
           <textarea class="new-comment-textarea" name="comment" type="text" row=2 placeholder="Comment..." value=""></textarea>
         </div>
         <div>
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
           <button id="new-comment__cancel">Cancel</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     `
@@ -28,10 +29,10 @@ $(() => {
 
   $('body').on('submit', '.new-comment-form', function(event) {
     event.preventDefault();
-    
+
     const itemId = $('.item-detail').attr('id').slice(8);
     const params = $(this).serializeArray();
-    
+
     submitComment(params, itemId)
       .then(() => $newComment.empty())
       .then(() => newCommentForm())

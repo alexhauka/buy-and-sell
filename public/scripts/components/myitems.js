@@ -1,16 +1,22 @@
 $(() => {
   const createMyItemElem = function(item) {
     return `
-      <article class="my-item" id="my-item_${item.id}">
+    <article>
+      <section class="my-item" id="my-item_${item.id}">
         <section class="item-thumbnail">
           <img src="${item.thumbnail_url}" alt="Item image">
-        <section class="item-body">
-          <h4 class="item-listing-name">${item.name}</h4>
-          <div class="item-listing-detail">
-            Price: $${(item.price / 100).toFixed(2)}
-          </div>
         </section>
-      </article>
+        <section class="item-body">
+          <h3 class="item-listing-name">${item.name}</h3>
+            <span id ="my-items-price">$${(item.price / 100).toFixed(2)}</span>
+            <span>Posted On: ${item.date_posted.slice(0, 11).replace('T', ' ')}</span>
+        </section>
+      </section>
+      <div class ="more-details-sidebar-myitems">
+        <span>More Details</span>
+        <span id ="arrow-img"><img src="https://img.icons8.com/metro/26/000000/circled-right-2.png"/></span>
+      </div>
+    </article>
     `
   }
 
@@ -34,8 +40,8 @@ $(() => {
 
   window.myItems.showMyItems = showMyItems;
 
-  $('body').on('click', '.my-item', function() {
-    const itemId = $(this).attr('id').slice(8);
+  $('body').on('click', '.more-details-sidebar-myitems', function() {
+    const itemId = $(this).parent().find('.my-item').attr('id').slice(8);
 
     getItem(itemId)
       .then(data => myItem.showMyItem(data))

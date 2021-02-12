@@ -8,36 +8,41 @@ $(() => {
     }
     return `
       <article class="item-detail" id="item_id_${item.id}">
-        <section class="item-image">
+        <h2>${item.name}</h2>
+        <section class="item-name-and-image">
           <img src="${item.img_url}" alt="None">
-          <h4>${item.name}</h4>
-          </section>
-        <section class="item-description">
-          <span>${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
-          <span class="item-user-id" id="user_id_${item.user_id}">Posted By: ${item.user_name}</span>
         </section>
-        <section class="tempID">
-          <p>Description:<br>${item.description}</p>
-          <div>
-            $${(item.price / 100).toFixed(2)}
-          </div>
-          <div>
-            ${soldOrNot}
-          </div>
-          <span class="add-to-favorites">
-            Favorite <img src="https://img.icons8.com/color/48/000000/like--v3.png"/>
-          </span>
+        <section class = "item-detail-section">
+            <p>${item.description}</p>
+            <span>
+              $${(item.price / 100).toFixed(2)}
+            </span>
+            <span>
+              Posted On: ${item.date_posted.slice(0, 11).replace('T', ' ')}
+            </span>
+            <span class="item-user-id" id="user_id_${item.user_id}">
+              Posted By: ${item.user_name}
+            </span>
+            <span>
+              ${soldOrNot}
+            </span>
+            <span class="add-to-favorites">
+              Favorite <img src="https://img.icons8.com/color/48/000000/like--v3.png"/>
+            </span>
         </section>
         <section class="new-comment">
         </section>
+      </article>
+      <section class="comment-section">
+        <h4>Comments:</h4>
         <section class="comments">
         </section>
-      </article>
+      </section>
     `;
   };
 
   const $item = $(`
-    <section>
+    <section class="item-details-and-comments">
       Loding...
     </section>
   `);
