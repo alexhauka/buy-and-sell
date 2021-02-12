@@ -85,14 +85,14 @@ $(() => {
 
   // Log in button logs in User 1. If you want to change user. See public/scripts/network.js
   $('header').on('click', '.nav-login', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     logIn()
       .then(() => header.loadHeader(1));
   });
 
   $('header').on('click', '.nav-logout', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     logOut()
       .then(() => {
@@ -101,7 +101,7 @@ $(() => {
   });
 
   $('header').on('click', '.nav-my-items', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     getMyItems()
       .then(data => {
@@ -112,13 +112,13 @@ $(() => {
   });
 
   $('header').on('click', '.nav-new-item', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     views_manager.show('newItem');
   });
 
   $('header').on('click', '.nav-item-list', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     getItems()
       .then(data => {
@@ -137,19 +137,23 @@ $(() => {
     $('.quick-search-dropdown').empty()
     $('.advanced-search-form').css('margin-top', 0)
     $('.item-detail').css('margin-top', 0)
+    $('.items').css('margin-top', 0)
+    $('.favorites').css('margin-top', 0)
     $header.find('.quick-search-dropdown').append(quickSearchDropdown);
     $('.page-main').css('margin-top', 0)
     $('.quick-search-dropdown').show()
   });
 
   $('header').on('click', '#cancel-button', function() {
-    $('.advanced-search-form').css('margin-top', 180)
+    $('.advanced-search-form').css('margin-top', 160)
     $('.item-detail').css('margin-top', 180)
+    $('.items').css('margin-top', 140)
+    $('.favorites').css('margin-top', 140)
     $('.quick-search-dropdown').hide()
   });
 
   $('header').on('click', '.nav-messages', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     getMessages()
       .then(msgObj => {
@@ -160,7 +164,7 @@ $(() => {
   });
 
   $('header').on('click', '.nav-favourites', function() {
-    $('.page-main').css('margin-top', 120)
+    // $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     getFavouritesByUser()
       .then(favObj => {

@@ -8,11 +8,11 @@ $(() => {
     }
     return `
       <article class="item-detail" id="item_id_${item.id}">
-        <section class="item-image">
+        <h3>${item.name}</h3>
+        <section class="item-name-and-image">
           <img src="${item.img_url}" alt="None">
-          <h4>${item.name}</h4>
-          </section>
-        <section class="item-description">
+        </section>
+        <section class="detailed-item-description">
           <span>${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
           <span class="item-user-id" id="user_id_${item.user_id}">Posted By: ${item.user_name}</span>
         </section>

@@ -2,15 +2,20 @@
   margin: 10px;
   margin-top: 180px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  .item-name {
-    h4 {
-      font-size: 2em;
-      font-family: 'Ubuntu Condensed', sans-serif;
-      text-align: center;
+  h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center;
+  }
+  .item-name-and-image {
+    border: 3px solid black;
+    border-radius: 25px;
+    img {
+      padding: 7px;
     }
+
   }
   .tempID {
     margin-top: 0;
