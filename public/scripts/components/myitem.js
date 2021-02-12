@@ -7,7 +7,7 @@ $(() => {
         </section>
         <section class="item-name">
           <h4>${item.name}</h4>
-          <span>${item.date_posted.slice(0, 19).replace('T', ' ')}</span>
+          <span>${item.date_posted.slice(0, 11).replace('T', ' ')}</span>
           <span class="item-user-id" id="user_id_${item.user_id}">From User: ${item.user_name}</span>
         </section>
         <section class="item-detail">

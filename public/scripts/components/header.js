@@ -47,7 +47,7 @@ $(() => {
               <ol>
                 <a class="nav-user-id">Logged in</a>
                 <a class="nav-new-item">New Post</a>
-                <a class="nav-my-items">My Items</a>
+                <a class="nav-my-items">My Posts</a>
                 <a class="nav-messages">Messages</a>
                 <a class="nav-favourites">Favourites</a>
                 <a class="nav-item-list">Items</a>

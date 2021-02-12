@@ -9,7 +9,8 @@
     section {
       font-size: 0.95em;
       &:hover #comment-date{
-        visibility:visible
+        visibility:visible;
+        cursor: default;
       }
       #commenter-name {
         color: green;

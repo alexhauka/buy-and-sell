@@ -1,16 +1,22 @@
 $(() => {
   const createMyItemElem = function(item) {
     return `
-      <article class="my-item" id="my-item_${item.id}">
+    <article>
+      <section class="my-item" id="my-item_${item.id}">
         <section class="item-thumbnail">
           <img src="${item.thumbnail_url}" alt="Item image">
-        <section class="item-body">
-          <h4 class="item-listing-name">${item.name}</h4>
-          <div class="item-listing-detail">
-            Price: ${item.price}
-          </div>
         </section>
-      </article>
+        <section class="item-body">
+          <h3 class="item-listing-name">${item.name}</h3>
+            <span id ="my-items-price">$${(item.price / 100).toFixed(2)}</span>
+            <span>Posted On: ${item.date_posted.slice(0, 11).replace('T', ' ')}</span>
+        </section>
+      </section>
+      <div class ="more-details-sidebar-myitems">
+        <span>More Details</span>
+        <span id ="arrow-img"><img src="https://img.icons8.com/metro/26/000000/circled-right-2.png"/></span>
+      </div>
+    </article>
     `
   }
 
