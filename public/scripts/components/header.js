@@ -69,7 +69,7 @@ $(() => {
     <div id ="search-bar">
         <div>
           <form class="quick-search">
-            <label for="search-text">Search by item:</label>
+            <label for="search-text">Search By Item:</label>
             <input type="text" id="search-text" name="name">
             <button type ="submit" id="search-button">Search</button>
             <button type ="button" id="cancel-button">Cancel</button>
@@ -129,20 +129,20 @@ $(() => {
   });
 
   $('header').on('click', '.nav-search', function() {
-    $('.page-main').css('margin-top', 120)
     $('.quick-search-dropdown').hide()
     views_manager.show('searchItem');
   });
 
   $('header').on('click', '#search-bar-link', function() {
     $('.quick-search-dropdown').empty()
+    $('.advanced-search-form').css('margin-top', 0)
     $header.find('.quick-search-dropdown').append(quickSearchDropdown);
     $('.page-main').css('margin-top', 0)
     $('.quick-search-dropdown').show()
   });
 
   $('header').on('click', '#cancel-button', function() {
-    $('.page-main').css('margin-top', 120)
+    $('.advanced-search-form').css('margin-top', 180)
     $('.quick-search-dropdown').hide()
   });
 

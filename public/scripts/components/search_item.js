@@ -1,25 +1,27 @@
 $(() => {
   const $searchItemForm = $(`
-    <form>
-      <section>
-        <div>
-          <label>Keyword: </label>
-          <label>Minimum price: </label>
-          <label>Maximum price: </label>
+    <section class ="advanced-search-form">
+      <h2>Advanced Search</h2>
+      <form>
+        <div class ="filter-fields">
+          <input type="text" name="name" placeholder ="Keyword"/>
+          <input type="number" step="0.01" name="min_price" placeholder="Min Price"/>
+          <input type="number" step="0.01" name="max_price" placeholder="Max Price"/>
         </div>
-        <div>
-          <input type="text" name="name" />
-          <input type="number" step="0.01" name="min_price" />
-          <input type="number" step="0.01" name="max_price" />
+        <div class ="filter-buttons">
+          <button id="search-item-form__cancel">Cancel</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
         </div>
-      </section>
-      <div>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-        <button id="search-item-form__cancel">Cancel</button>
-      </div>
-    </form>
+      </form>
+    </section>
   `);
+
+  // <div class ="filters">
+  //         <label>Keyword: </label>
+  //         <label>Minimum price: </label>
+  //         <label>Maximum price: </label>
+  //       </div>
 
   window.$searchItemForm = $searchItemForm;
 
@@ -37,9 +39,9 @@ $(() => {
         views_manager.show('items');
       });
   });
+  $('body').on('click', '#search-item-form__cancel', function() {
+    views_manager.show('listings');
+    return false;
+  });
 });
 
-$('body').on('click', '#search-item-form__cancel', function() {
-  views_manager.show('listings');
-  return false;
-});
