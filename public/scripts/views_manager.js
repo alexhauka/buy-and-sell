@@ -42,7 +42,7 @@ $(() => {
       case 'myItems':
         $myItems.appendTo($main);
         break;
-      
+
       case 'myItem':
         $myItem.appendTo($main);
         break;
@@ -54,10 +54,10 @@ $(() => {
           $error.remove();
           views_manager.show('listings');
         }, 2000);
-        
+
         break;
       }
     }
   }
-  
+
 });

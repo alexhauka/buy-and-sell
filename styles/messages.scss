@@ -1,0 +1,35 @@
+.messages {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .private-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    margin-bottom: 30px;
+    width: 75%;
+    border-radius: 25px;
+    background-color: #A8DDFD;
+    padding: 15px;
+    width: 100%;
+    span {
+      font-size: 0.8em
+    }
+    p {
+      text-align: left;
+    }
+    div {
+      visibility: hidden;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover div {
+      visibility: visible;
+    }
+  }
+}

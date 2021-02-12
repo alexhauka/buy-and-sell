@@ -1,0 +1,88 @@
+.myitem-details-and-comments {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .item-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    margin-left: 24%;
+    h2 {
+      font-family: 'Ubuntu Condensed', sans-serif;
+      text-align: center;
+    }
+    .item-name-and-image {
+      img {
+        padding: 7px;
+      }
+    }
+    .item-detail-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align:center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid black;
+      span {
+        font-size: 0.8em;
+      }
+    }
+    .myitem-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align:center;
+      p {
+        margin: 0;
+      }
+      #delete-my-item {
+        margin-top: 5px;
+        &:hover {
+          cursor: pointer;
+          color: red;
+          margin-left: 5px;
+        }
+      }
+      #change-to-sold {
+        &:hover {
+          cursor: pointer;
+          color: green;
+          margin-left: 5px;
+        }
+      }
+    }
+    .my-new-comment {
+      form {
+        p {
+          text-align: center;
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: 10px;
+          font-size: 0.75em;
+          .new-comment-textarea {
+            height: 60px;
+            width: 185px;
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+  .myitems-comment-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    h4 {
+      padding-left: 140px;
+    }
+    // .my-comments {
+    //   visibility: hidden;
+    // }
+  }
+}

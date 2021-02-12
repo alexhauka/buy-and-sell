@@ -1,0 +1,32 @@
+.new-post-section {
+  margin-top: 180px;
+  h2 {
+    text-align: center;
+  }
+  form {
+    section {
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        input {
+          margin-bottom: 15px;
+        }
+        textarea {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .new-post-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      button {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+

@@ -1,40 +1,53 @@
 $(() => {
   const createDetailedMyItemElem = function(item) {
+    let soldOrNot;
+    if (item.is_sold) {
+      soldOrNot = 'Item Sold'
+    } else {
+      soldOrNot = 'Item Available'
+    }
     return `
       <article class="item-detail" id="item_id_${item.id}">
-        <section class="item-image">
+        <h2>${item.name}</h2>
+        <section class="item-name-and-image">
           <img src="${item.thumbnail_url}" alt="None">
         </section>
-        <section class="item-name">
-          <h4>${item.name}</h4>
-          <span>${item.date_posted.slice(0, 11).replace('T', ' ')}</span>
-          <span class="item-user-id" id="user_id_${item.user_id}">From User: ${item.user_name}</span>
+        <section class="item-detail-section">
+          <p>${item.description}</p>
+          <span>
+            $${(item.price / 100).toFixed(2)}
+          </span>
+          <span>
+            Posted On: ${item.date_posted.slice(0, 11).replace('T', ' ')}
+          </span>
+          <span class="item-user-id" id="user_id_${item.user_id}">
+            Posted By: ${item.user_name}
+          </span>
+          <span>
+            ${soldOrNot}
+          </span>
         </section>
-        <section class="item-detail">
-          <p>Description:<br>${item.description}</p>
-          <div>
-            Price: $${(item.price / 100).toFixed(2)}
-          </div>
-          <div>
-            SOLD: ${item.is_sold}
-          </div>
-          <div id="delete-my-item">
+        <section class="myitem-details">
+          <p id="delete-my-item">
             Delete Item
-          </div>
-          <div id="change-to-sold">
+          </p>
+          <p id="change-to-sold">
             ${item.is_sold ? 'SOLD' : 'Mark as sold'}
-          </div>
+          </p>
         </section>
         <section class="my-new-comment">
         </section>
+      </article>
+      <section class ="myitems-comment-section">
+        <h4>Comments:</h4>
         <section class="my-comments">
         </section>
-      </article>
+      </section>
     `;
   };
 
   const $myItem = $(`
-    <section>
+    <section class ="myitem-details-and-comments">
       Loding...
     </section>
   `);

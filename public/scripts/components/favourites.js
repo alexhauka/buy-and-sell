@@ -20,7 +20,6 @@ $(() => {
           <span>Posted By: ${favObj.user_id}</span>
           <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span>
           <span>${soldOrNot}</span>
-
         </div>
       </section>
       <div class="delete-favorite" id="favorite_id_${favObj.id}">
@@ -41,6 +40,7 @@ $(() => {
 
   const loadFavourites = function(data) {
     $favorites.empty();
+    $favorites.append('<h2>My Favourites</h2>')
     data.forEach(datum => {
       const favorite = createFavouritesHTML(datum);
       $favorites.append(favorite);

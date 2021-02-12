@@ -27,6 +27,11 @@ $(() => {
 
   $('body').on('submit', '.search_form', function(event) {
     event.preventDefault();
+    const minPrice = $(this).find('input[name=min_price]').val() * 100;
+    const maxPrice = $(this).find('input[name=max_price]').val() * 100;
+    $(this).find('input[name=min_price]').val(minPrice);
+    $(this).find('input[name=max_price]').val(maxPrice);
+
     const params = $(this).serialize();
 
     searchItems(params)
