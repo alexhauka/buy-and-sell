@@ -3,12 +3,12 @@ $(() => {
     return `
       <form class="new-message-form">
         <div>
-          <textarea class="new-message-textarea" name="message" type="text" row=2 placeholder="Message..." value=""></textarea>
+          <textarea class="new-message-textarea" name="message" type="text" row=2 placeholder="Send a Message..." value=""></textarea>
         </div>
         <div>
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
           <button id="new-message__cancel">Cancel</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     `
@@ -28,7 +28,7 @@ $(() => {
 
   $('body').on('submit', '.new-message-form', function(event) {
     event.preventDefault();
-    
+
     const otherId = localStorage.getItem('messageTo');
     const params = $(this).serializeArray();
     console.log(otherId);

@@ -1,26 +1,23 @@
 $(() => {
   const $newItemForm = $(`
+    <section class="new-post-section">
+      <h2>Make a New Post:</h2>
     <form>
       <section>
         <div>
-          <label for="item-name">Name:</label>
-          <label for="item-description">Description: </label>
-          <label for="item-img_url">Image URL: </label>
-          <label for="item-price">Price: $</label>
-        </div>
-        <div>
-          <input id="item-name" name="name" type="text">
-          <textarea id="item-description" name="description" rows="4" cols="50"></textarea>
-          <input id="item-img_url" name="img_url" type="text">
-          <input id="item-price" name="price" type="number" step="0.01" min="0" value="0">
+          <input id="item-name" name="name" type="text" placeholder="Item Name">
+          <textarea id="item-description" name="description" rows="4" cols="50" placeholder="Item Description"></textarea>
+          <input id="item-img_url" name="img_url" type="text" placeholder="Image URL">
+          <input id="item-price" name="price" type="number" step="0.01" min="0" value="0" placeholder="Price">
         </div>
       </section>
-      <section>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+      <section class="new-post-buttons">
         <button id="item-form__cancel">Cancel</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
       </section>
     </form>
+    </section>
   `);
 
   window.$newItemForm = $newItemForm;
@@ -39,8 +36,8 @@ $(() => {
       .then(() => $comments.appendTo('.comments'))
       .then(() => newCommentForm())
       .then(() => $('.new-comment').append($newComment))
-      
-      .catch((error) => { 
+
+      .catch((error) => {
           console.error(error);
           views_manager.show('items');
       })

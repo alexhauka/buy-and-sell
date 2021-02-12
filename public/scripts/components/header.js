@@ -139,6 +139,9 @@ $(() => {
     $('.item-details-and-comments').css('margin-top', 0)
     $('.items').css('margin-top', 0)
     $('.favorites').css('margin-top', 0)
+    $('.myitem-details-and-comments').css('margin-top', 0)
+    $('.messages').css('margin-top', 0)
+    $('.new-post-section').css('margin-top', 0)
     $header.find('.quick-search-dropdown').append(quickSearchDropdown);
     $('.page-main').css('margin-top', 0)
     $('.quick-search-dropdown').show()
@@ -149,6 +152,9 @@ $(() => {
     $('.item-details-and-comments').css('margin-top', 180)
     $('.items').css('margin-top', 140)
     $('.favorites').css('margin-top', 140)
+    $('.myitem-details-and-comments').css('margin-top', 180)
+    $('.messages').css('margin-top', 180)
+    $('.new-post-section').css('margin-top', 180)
     $('.quick-search-dropdown').hide()
   });
 

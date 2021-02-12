@@ -1,20 +1,22 @@
 $(() => {
   const createMessageHTML = function(message) {
     return `
-      <article class="private-message" id="sender_id_${message.sender_id}">
-        <p>${message.message}</p>
+    <article class ="message-and-sender">
+      <section class="private-message" id="sender_id_${message.sender_id}">
+        <span>From: ${message.name}</span>
+        <p id ="testtest">${message.message}</p>
         <div>
-          <span>From: ${message.name}</span><br>
-          <span>Sent on: ${message.sent_date.slice(0, 19).replace('T', ' ')}</span>
+          <span>Sent on: ${message.sent_date.slice(0, 11).replace('T', ' ')}</span>
         </div>
-      </article>
+      </section>
+    </article>
     `
   };
 
   const $messages = $(`
     <section class="messages">
       <p>Loading...</p>
-    </section>  
+    </section>
   `)
 
   window.$messages = $messages;
@@ -22,10 +24,12 @@ $(() => {
 
   const loadMessages = function(data) {
     $messages.empty();
+    // $messages.append('<h2>My Messages</h2>')
     data.forEach(datum => {
       const message = createMessageHTML(datum);
       $messages.append(message);
     })
+
   };
 
   window.messages.loadMessages = loadMessages;

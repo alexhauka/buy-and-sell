@@ -20,11 +20,10 @@ $(() => {
           <span>Posted By: ${favObj.user_id}</span>
           <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span>
           <span>${soldOrNot}</span>
-
         </div>
       </section>
       <div class="delete-favorite">
-        <span>Delete Favorite</span>
+        <span>Delete</span>
       </div>
     </article>
     `
