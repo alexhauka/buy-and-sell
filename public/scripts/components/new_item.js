@@ -30,20 +30,17 @@ $(() => {
     const params = $(this).serialize();
 
     submitItem(params)
-      .then(data => {
-        item.showItem(data);
-        return data.id;
-      })
-      .then((itemId) => getComments(itemId))
-      .then(data => comments.showComments(data))
-      .then(() => $comments.appendTo('.comments'))
+      .then(data => getItem(data.id))
+      .then(data => item.showItem(data))
       .then(() => newCommentForm())
-      .then(() => $('.new-comment').append($newComment))
-      
-      .catch((error) => { 
-          console.error(error);
-          views_manager.show('items');
+      .then(() => $item.find('.new-comment').append($newComment))
+      .then(() => getComments(itemId))
+      .then(data => comments.showComments(data))
+      .then(() => {
+        $item.find('.comments').append($comments);
+        views_manager.show('item');
       })
+      .catch(err => console.error(err));
 
     views_manager.show('item');
   });

@@ -17,13 +17,13 @@ $(() => {
         <div class ="favorited-item-description">
           <h4>${favObj.name} ($${(favObj.price / 100).toFixed(2)})</h4>
           <span>Description: ${favObj.description}</span>
-          <span>Posted By: ${favObj.user_id}</span>
+          <span>Posted By: ${favObj.user_name}</span>
           <span>Posted On: ${favObj.date_posted.slice(0, 11).replace('T', ' ')}</span>
           <span>${soldOrNot}</span>
 
         </div>
       </section>
-      <div class="delete-favorite">
+      <div class="delete-favorite" id="favorite_id_${favObj.id}">
         <span>Delete Favorite</span>
       </div>
     </article>
@@ -48,7 +48,7 @@ $(() => {
   };
 
   $('body').on('click', '.delete-favorite', function() {
-    const favoriteId = $('.favorited-item').attr('id').slice(12);
+    const favoriteId = $(this).attr('id').slice(12);
 
     deleteFavorite(favoriteId)
       .then(() => getFavouritesByUser())

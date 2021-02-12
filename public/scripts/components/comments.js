@@ -4,7 +4,7 @@ $(() => {
     return `
       <article class="comment" id="comment_${comment.id}">
         <section>
-          ${comment.user_id}<br />
+          ${comment.name}<br />
           ${comment.posted_at.slice(0, 19).replace('T', ' ')}
         </section>
         <p>${comment.comment}</p>
