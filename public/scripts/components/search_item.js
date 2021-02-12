@@ -2,7 +2,7 @@ $(() => {
   const $searchItemForm = $(`
     <section class ="advanced-search-form">
       <h2>Advanced Search</h2>
-      <form>
+      <form class="search_form">
         <div class ="filter-fields">
           <input type="text" name="name" placeholder ="Keyword"/>
           <input type="number" step="0.01" name="min_price" placeholder="Min Price"/>
@@ -25,7 +25,7 @@ $(() => {
 
   window.$searchItemForm = $searchItemForm;
 
-  $searchItemForm.on('submit', function(event) {
+  $('body').on('submit', '.search_form', function(event) {
     event.preventDefault();
     const params = $(this).serialize();
 
