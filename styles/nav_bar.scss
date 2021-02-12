@@ -51,31 +51,24 @@ body {
       height: 18vh;
       display: flex;
       flex-direction: row;
-      width: 80%;
-      #logo {
-        width: 25%;
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
+      width: 100%;
       #links-and-name {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         padding-left: 15px;
         #company-name {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          max-height: 48px;
+          // max-height: 48px;
           word-wrap: break-word;
           h3 {
             font-family: 'Lobster', cursive;
             max-height: 48px;
-            font-size: 3.5em;
-            margin-bottom: 0px;
-            margin-top: 5px;
+            font-size: 4em;
+            margin-bottom: 2.5px;
+            margin-top: 10px;
           }
         }
         #links {
@@ -88,7 +81,8 @@ body {
             display: flex;
             flex-direction: row;
             padding-left: 15px;
-            justify-content: space-between;
+            padding-right: 15px;
+            justify-content: space-evenly;
             .nav-user-id {
               color: black;
               &:hover {
@@ -101,6 +95,8 @@ body {
               font-size: 1.0em;
               color: white;
               text-decoration: none;
+              // padding-left: 50px;
+              // padding-right: 50px;
               &:hover {
                 padding-top: 5px;
                 cursor: pointer;

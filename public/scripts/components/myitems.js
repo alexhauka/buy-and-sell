@@ -32,6 +32,7 @@ $(() => {
 
   const showMyItems = function(data) {
     $myItems.empty();
+    $myItems.append('<h2>My Posts</h2>')
     data.forEach(datum => {
       const item = createMyItemElem(datum);
       $myItems.append(item);

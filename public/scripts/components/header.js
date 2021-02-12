@@ -10,9 +10,6 @@ $(() => {
     if (!user) {
       navBar = `
         <div id ="logo-links-and-name">
-          <div id ="logo">
-            <img src ="https://64.media.tumblr.com/294fcb5cb69d7bb052b94d82f686b7c8/tumblr_pmrd24Nz3a1qkm0xd_400.jpg" alt = "logo">
-          </div>
           <div id ="links-and-name">
             <div id="company-name">
               <h3>
@@ -34,9 +31,6 @@ $(() => {
     } else {
       navBar = `
         <div id ="logo-links-and-name">
-          <div id ="logo">
-            <img src ="https://64.media.tumblr.com/294fcb5cb69d7bb052b94d82f686b7c8/tumblr_pmrd24Nz3a1qkm0xd_400.jpg" alt = "logo">
-          </div>
           <div id ="links-and-name">
             <div id="company-name">
               <h3>

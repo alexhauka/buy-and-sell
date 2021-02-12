@@ -40,6 +40,7 @@ $(() => {
 
   const loadFavourites = function(data) {
     $favorites.empty();
+    $favorites.append('<h2>My Favourites</h2>')
     data.forEach(datum => {
       const favorite = createFavouritesHTML(datum);
       $favorites.append(favorite);

@@ -46,6 +46,7 @@ $(() => {
 
   const showItems = function(data) {
     $items.empty();
+    $items.append('<h2>Items For Sale</h2>')
     data.forEach(datum => {
       const item = createItemElem(datum);
       $items.append(item);
