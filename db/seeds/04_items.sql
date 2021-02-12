@@ -261,7 +261,7 @@ insert into items (name, price, date_posted, is_sold, user_id) values ('Chips Po
 insert into items (name, price, date_posted, is_sold, user_id) values ('Dried Apple', 7697, '2020-01-05 09:19:38', false, 40);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Wine - White, Colubia Cresh', 7375, '2019-04-20 16:03:36', false, 51);
 insert into items (name, price, date_posted, is_sold, user_id) values ('External Supplier', 4834, '2019-10-22 00:29:26', false, 183);
-insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sugar - Palm','Palm sugar for your healthy-baking needs!', '../../img/sugar.jpg', '../../img/sugar.jpg', 6347, '2019-03-23 09:29:55', false, 96);
+insert into items (name, description, thumbnail_url, img_url, price, date_posted, is_sold, user_id) values ('Sugar - Palm','Palm sugar for your healthy-baking needs!', '../../img/sugar.jpeg', '../../img/sugar.jpeg', 6347, '2019-03-23 09:29:55', false, 96);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Almonds Ground Blanched', 9358, '2019-01-12 04:36:09', true, 184);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Swordfish Loin Portions', 5297, '2020-01-09 14:20:58', true, 110);
 insert into items (name, price, date_posted, is_sold, user_id) values ('Rabbit - Frozen', 9176, '2020-11-11 16:24:08', true, 185);
