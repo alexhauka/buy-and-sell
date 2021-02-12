@@ -57,7 +57,7 @@ $(() => {
     $item.append(item);
   };
 
-  $('body').on('click', '#add-to-favorites', function(event) {
+  $('body').on('click', '.add-to-favorites', function(event) {
     event.preventDefault();
     const itemId = $('.item-detail').attr('id').slice(8);
 

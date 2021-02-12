@@ -1,6 +1,6 @@
 $(() => {
   const $newItemForm = $(`
-    <form>
+    <form class="new-item-form">
       <section>
         <div>
           <label for="item-name">Name:</label>
@@ -25,7 +25,7 @@ $(() => {
 
   window.$newItemForm = $newItemForm;
 
-  $newItemForm.on('submit', function (event) {
+  $('body').on('submit', '.new-item-form', function (event) {
     event.preventDefault();
     const params = $(this).serialize();
 
@@ -33,16 +33,16 @@ $(() => {
       .then(data => getItem(data.id))
       .then(data => item.showItem(data))
       .then(() => newCommentForm())
-      .then(() => $item.find('.new-comment').append($newComment))
-      .then(() => getComments(itemId))
-      .then(data => comments.showComments(data))
-      .then(() => {
-        $item.find('.comments').append($comments);
+      .then(() => { $item.find('.new-comment').append($newComment);
+      // .then(() => getComments(itemId))
+      // .then(data => comments.showComments(data))
+      // .then(() => {
+      //   $item.find('.comments').append($comments);
         views_manager.show('item');
       })
       .catch(err => console.error(err));
 
-    views_manager.show('item');
+    // views_manager.show('item');
   });
 
   $('body').on('click', '#item-form__cancel', function() {
