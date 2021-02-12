@@ -11,7 +11,7 @@ $(() => {
     return `
       <article class="favorited-item" id="favorite_id_${favObj.id}">
         <div class ="favorited-item-img">
-          <span>img goes here</span>
+          <img src ="${favObj.img_url}">
         </div>
         <div class ="favorited-item-description">
           <h4>${favObj.name}</h4>
