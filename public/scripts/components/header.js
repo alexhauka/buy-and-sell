@@ -136,7 +136,7 @@ $(() => {
   $('header').on('click', '#search-bar-link', function() {
     $('.quick-search-dropdown').empty()
     $('.advanced-search-form').css('margin-top', 0)
-    $('.item-detail').css('margin-top', 0)
+    $('.item-details-and-comments').css('margin-top', 0)
     $('.items').css('margin-top', 0)
     $('.favorites').css('margin-top', 0)
     $header.find('.quick-search-dropdown').append(quickSearchDropdown);
@@ -146,7 +146,7 @@ $(() => {
 
   $('header').on('click', '#cancel-button', function() {
     $('.advanced-search-form').css('margin-top', 160)
-    $('.item-detail').css('margin-top', 180)
+    $('.item-details-and-comments').css('margin-top', 180)
     $('.items').css('margin-top', 140)
     $('.favorites').css('margin-top', 140)
     $('.quick-search-dropdown').hide()

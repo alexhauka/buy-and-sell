@@ -1,13 +1,11 @@
 $(() => {
   const createCommentElem = function(comment) {
-    console.log(comment)
     return `
       <article class="comment" id="comment_${comment.id}">
         <section>
-          ${comment.user_id}<br />
-          ${comment.posted_at.slice(0, 19).replace('T', ' ')}
+          <span id ="comment-date">${comment.posted_at.slice(0, 11).replace('T', ' ')}</span>
+          <span id="commenter-name">${comment.name}:</span><span id ="comment-text">${comment.comment}</span>
         </section>
-        <p>${comment.comment}</p>
       </article>
     `
   };
